@@ -8,7 +8,7 @@
 - run `node index --help` to get options
 
 ```bash
-node  --help
+node  index --help
 Usage: generator [options]
 
 Options:
