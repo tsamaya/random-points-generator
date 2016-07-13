@@ -20,10 +20,18 @@ Options:
 Examples:
   generator                                 Generates 10 random coordinates,
                                             saved in csv formant in file `out`
+
   generator -f geojson                      Generates 10 random coordinates,
-                                            saved in geojson format in file òut`
+                                            saved in geojson format in file `out`
+
+  generator -f both                         Generates 10 random coordinates,
+                                            saved in both csv and geojson
+                                            format in files `out.csv` and
+                                            `out.geojson`
+
   generator -n 1000 --xmin=-180 --xmax=180  Generates 1000 random coordinates
   --ymin=-55 --ymax=83                      with bounding box
+
   generator -i world_countries.geojson      Generates 10 random coordiantes with
                                             polygons from file
                                             world_countries.geojson
