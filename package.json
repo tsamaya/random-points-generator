@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
-  "main": "index.js",
+  "main": "generator.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
@@ -15,7 +15,9 @@
   "keywords": [
     "random",
     "point",
-    "generator"
+    "generator",
+    "csv",
+    "geojson"
   ],
   "author": "Arnaud Ferrand",
   "license": "MIT",

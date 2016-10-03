@@ -1,14 +1,15 @@
-## random-points-generator
+# random-points-generator
 
-### Usage
+## Usage
 
+### From the command line
 - clone or fork the repo
 - `cd random-points-generator`
 - run `npm install`
 - run `node index --help` to get options
 
 ```bash
-node  index --help
+node  generator --help
 Usage: generator [options]
 
 Options:
@@ -18,26 +19,26 @@ Options:
   --output, -o                                                  [default: "out"]
 
 Examples:
-  generator                                 Generates 10 random coordinates,
+  node generator                            Generates 10 random coordinates,
                                             saved in csv formant in file `out`
 
-  generator -f geojson                      Generates 10 random coordinates,
+  node generator -f geojson                 Generates 10 random coordinates,
                                             saved in geojson format in file `out`
 
-  generator -f both                         Generates 10 random coordinates,
+  node generator -f both                    Generates 10 random coordinates,
                                             saved in both csv and geojson
                                             format in files `out.csv` and
                                             `out.geojson`
 
-  generator -n 1000 --xmin=-180 --xmax=180  Generates 1000 random coordinates
-  --ymin=-55 --ymax=83                      with bounding box
+  node generator -n 1000 --xmin=-180        Generates 1000 random coordinates
+  --xmax=180 --ymin=-55 --ymax=83           with bounding box
 
-  generator -i world_countries.geojson      Generates 10 random coordiantes with
+  node generator -i world_countries.geojson Generates 10 random coordiantes with
                                             polygons from file
                                             world_countries.geojson
 ```
 
-### Licensing
+## Licensing
 Licensed under the MIT License
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
