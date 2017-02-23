@@ -4,12 +4,15 @@ var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-var jasminetask = require('gulp-jasmine');
+var gutil = require('gulp-util');
+var mocha = require('gulp-mocha');
+
 
 var paths = {
-  sources: ['lib/**/*.js', 'spec/**/*.js', '*.js', ],
+  sources: ['lib/**/*.js', '*.js'],
   spec: ['spec/**/*.js']
 };
+
 function lint() {
   return gulp.src(['lib/**/*.js',
       'spec/**/*.js',
@@ -20,16 +23,22 @@ function lint() {
     .pipe(jshint.reporter(stylish));
 }
 
-function test() {
-  return gulp.src('spec/**/*.js')
-    .pipe(jasminetask());
-}
+gulp.task('mocha', function() {
+  return gulp.src(['spec/**/*.js'], {
+      read: false
+    })
+    .pipe(mocha({
+      reporter: 'list'
+    }))
+    .on('error', gutil.log);
+});
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(paths.sources, ['test']);
+  gulp.watch([paths.sources, paths.spec], ['test']);
 });
 
 gulp.task('lint', lint);
-gulp.task('test', ['lint'], test);
-gulp.task('default', ['watch', 'test']);
+gulp.task('test', ['lint', 'mocha']);
+
+gulp.task('default', ['test']);

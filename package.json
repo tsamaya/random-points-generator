@@ -1,9 +1,9 @@
 {
   "name": "random-points-generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
-  "main": "generator.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
@@ -23,16 +23,18 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "^4.2.1",
-    "turf": "^2.0.2",
-    "yargs": "^3.32.0"
+    "turf": "^3.0.14",
+    "yargs": "^6.6.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "gulp-jasmine": "^2.2.1",
-    "gulp-jshint": "^2.0.0",
-    "gulp-plumber": "^1.0.1",
-    "jasmine": "^2.4.1",
-    "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0"
+    "chai": "^3.5.0",
+    "gulp-mocha": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "gulp-plumber": "^1.1.0",
+    "mocha": "^3.2.0",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
   }
 }
