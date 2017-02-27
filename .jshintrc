@@ -89,7 +89,7 @@
 
     // Custom Globals
     "globals"       : {
-      "L": false
+      
       }
     // additional predefined global variables
 }

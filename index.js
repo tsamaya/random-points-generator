@@ -1,3 +1,3 @@
 module.exports = {
-  random: require('./lib/random-points')  
+  random: require('./lib/random-points')
 };

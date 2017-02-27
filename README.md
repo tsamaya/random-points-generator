@@ -4,6 +4,11 @@ Generates random points. default output is geojson
 
 ## Usage
 
+  $ npm install random-points-generator
+
+
+### API
+
 ### From the command line
 - clone or fork the repo
 - `cd random-points-generator`
