@@ -4,6 +4,7 @@
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
+  "bin": "./bin/random-points-generator",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
