@@ -9,6 +9,8 @@ Generates random points. default output is geojson
 
 ### API
 
+
+
 ### From the command line
 - clone or fork the repo
 - `cd random-points-generator`
@@ -37,6 +39,11 @@ Examples:
                                             polygons from file
                                             world_countries.geojson
 ```
+
+## Resources
+
+_resources_ folder contains Large Scale Data from [Natural Earth](http://www.naturalearthdata.com/)
+
 
 ## Licensing
 Licensed under the MIT License
