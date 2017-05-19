@@ -1,4 +1,4 @@
-# random-points-generator
+# random-points-generator [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
 
 Generates _n_ random points.
 Filters : points can be generated inside a geojson polygon from an input file or bounding boxes.
@@ -76,7 +76,7 @@ CSV files are not dead. So if needed here is a simple example to generate csv fi
 $ npm install random-points-generator
 $ npm install geojson2csv
 
-$ node_modules/.bin/random-points-generator > points.geojson
+$ ./node_modules/.bin/random-points-generator > points.geojson
 
 $ node
 ```
@@ -92,4 +92,4 @@ geojson2csv('points.geojson','points.csv', function(err){
 
 Licensed under the MIT License
 
-A copy of the license is available in the repository's <LICENSE> file.
+A copy of the license is available in the repository's [LICENSE](LICENSE) file.
