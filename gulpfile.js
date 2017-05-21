@@ -1,40 +1,34 @@
-'use strict';
-
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var gutil = require('gulp-util');
-var mocha = require('gulp-mocha');
+const eslint = require('gulp-eslint');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const mocha = require('gulp-mocha');
 
 
-var paths = {
+const paths = {
   sources: ['lib/**/*.js', '*.js'],
-  spec: ['spec/**/*.js']
+  spec: ['spec/**/*.js'],
 };
 
 function lint() {
-  return gulp.src(['lib/**/*.js',
-      'spec/**/*.js',
-      '*.js'
-    ])
-    .pipe(plumber())
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+  return gulp.src(['lib/**/*.js', 'spec/**/*.js', '*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    // Break on failure to be super strict
+    .pipe(eslint.failOnError());
 }
 
-gulp.task('mocha', function() {
+function testMocha() {
   return gulp.src(['spec/**/*.js'], {
-      read: false
-    })
-    .pipe(mocha({
-      reporter: 'list'
-    }))
-    .on('error', gutil.log);
-});
+    read: false,
+  }).pipe(mocha({
+    reporter: 'list',
+  })).on('error', gutil.log);
+}
+
+gulp.task('mocha', testMocha);
 
 // Rerun the task when a file changes
-gulp.task('watch', function() {
+gulp.task('watch', () => {
   gulp.watch([paths.sources, paths.spec], ['test']);
 });
 
