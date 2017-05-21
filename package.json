@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
@@ -29,13 +29,14 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "gulp-mocha": "^3.0.1",
-    "gulp-util": "^3.0.8",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
     "gulp": "^3.9.1",
-    "gulp-jshint": "^2.0.4",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
     "gulp-plumber": "^1.1.0",
-    "mocha": "^3.2.0",
-    "jshint": "^2.9.4",
-    "jshint-stylish": "^2.2.1"
+    "gulp-util": "^3.0.8",
+    "mocha": "^3.2.0"
   }
 }
