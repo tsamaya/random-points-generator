@@ -88,6 +88,16 @@ geojson2csv('points.geojson','points.csv', function(err){
   if(err) throw err
 });
 ```
+## Revision History
+
+| Version  | Date       | Description                        |
+| -------- | ---------- | ---------------------------------- |
+| `v1.4.0` | 20/02/2018 | Use single turf modules            |
+| `v1.3.0` | 07/11/2017 | Unkink input polygons              |
+| `v1.2.0` | 21/05/2017 | Rewrite with es6 notation          |
+| `v1.1.0` | 25/04/2017 | Split command line and lib         |
+| `v1.0.0` | 03/10/2016 | Creation : a tool command line     |
+
 
 ## Licensing
 
