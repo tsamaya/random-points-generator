@@ -5,6 +5,7 @@
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
   "bin": "./bin/random-points-generator",
+  "unpkg": "dist/random-points.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
@@ -17,8 +18,10 @@
     ]
   },
   "scripts": {
+    "build": "webpack",
     "codecov": "codecov",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
+    "prebuild": "npm run test",
     "precommit": "lint-staged",
     "pretest": "eslint .",
     "test": "mocha"
@@ -50,8 +53,12 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.5",
+    "lint-staged": "^7.0.0",
     "mocha": "^3.2.0",
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
   }
 }

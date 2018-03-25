@@ -5,19 +5,20 @@ Generates _n_ random points based on @turf/random.
 The value added regarding @turf/random is the filter. Indeed, here points can be generated inside a GeoJSON polygon.
 
  And it comes with :
- - a command line,
- - _(soon)_ a browser library available on the CDN unkpg
+ - a command line tool,
+ - a browser library
 
 [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
 
 ## Prerequisites
 - node
 
 ## Usage
 
+### node
 ```sh
 $ npm i random-points-generator
 ```
@@ -28,7 +29,17 @@ or
 yarn add random-points-generator
 ```
 
-### API
+### browser
+
+```html
+<script src="https://unpkg.com/random-points-generator"></script>
+
+<script>
+  const fc = geotools.random(5);
+</script>
+```
+
+## API
 #### function random (number, options)
 
  | Name      | Description                  | Type    | Default   |
@@ -106,13 +117,12 @@ geojson2csv('points.geojson','points.csv', function(err){
 
 | Version  | Date       | Description                        |
 | -------- | ---------- | ---------------------------------- |
-| `v1.5.0` | ../../.... | work in progress                   |
+| `v1.5.0` | 25/03/2018 | add a browser package              |
 | `v1.4.0` | 20/02/2018 | Use single turf modules            |
 | `v1.3.0` | 07/11/2017 | Unkink input polygons              |
 | `v1.2.0` | 21/05/2017 | Rewrite with es6 notation          |
 | `v1.1.0` | 25/04/2017 | Split command line and lib         |
 | `v1.0.0` | 03/10/2016 | Creation : a tool command line     |
-
 
 ## Resources
 
