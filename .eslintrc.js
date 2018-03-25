@@ -1,9 +1,7 @@
 module.exports = {
-  extends: 'airbnb-base',
-  plugins: [
-    'import'
-  ],
+  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  plugins: ['import'],
   env: {
-    'mocha': true,
-  }
+    mocha: true,
+  },
 };

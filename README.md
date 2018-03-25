@@ -1,7 +1,9 @@
-# random-points-generator [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)[![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
+# random-points-generator
 
 Generates _n_ random points.
 Filters : points can be generated inside a geojson polygon from an input file or bounding boxes.
+
+[![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)[![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 
 ## Prerequisites
 - node
@@ -92,6 +94,7 @@ geojson2csv('points.geojson','points.csv', function(err){
 
 | Version  | Date       | Description                        |
 | -------- | ---------- | ---------------------------------- |
+| `v1.5.0` | ../../.... | work in progress                   |
 | `v1.4.0` | 20/02/2018 | Use single turf modules            |
 | `v1.3.0` | 07/11/2017 | Unkink input polygons              |
 | `v1.2.0` | 21/05/2017 | Rewrite with es6 notation          |
