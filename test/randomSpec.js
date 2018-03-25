@@ -40,7 +40,9 @@ describe('Generates random points:', () => {
     expect(points.features[0].geometry.coordinates[1]).to.be.at.below(48);
   });
   it('It generates 1 random point within input GeoJSON file', () => {
-    const features = JSON.parse(fs.readFileSync('./resources/switzerland.geojson', 'utf8'));
+    const features = JSON.parse(
+      fs.readFileSync('./resources/switzerland.geojson', 'utf8')
+    );
     const points = RandomGenerator.random(1, { features });
     expect(points).to.be.a('object');
     expect(points.features).to.be.a('array');
