@@ -5,10 +5,5 @@ node_js:
   - "8"
   - "6"
 
-install:
-  - npm install
-
-before_script:
-  - npm install -g gulp
-
-script: gulp test
+after_script:
+  - npm run coverage

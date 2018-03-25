@@ -10,7 +10,10 @@
     "url": "https://github.com/tsamaya/random-points-generator.git"
   },
   "scripts": {
-    "test": "gulp test"
+    "codecov": "codecov",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
+    "pretest": "eslint .",
+    "test": "mocha"
   },
   "bugs": "https://github.com/tsamaya/random-points-generator/issues",
   "keywords": [
@@ -33,14 +36,11 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^3.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^3.0.1",
-    "gulp-mocha": "^3.0.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-util": "^3.0.8",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   }
 }
