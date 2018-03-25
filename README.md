@@ -1,4 +1,4 @@
-# random-points-generator [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
+# random-points-generator [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)[![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 
 Generates _n_ random points.
 Filters : points can be generated inside a geojson polygon from an input file or bounding boxes.
@@ -26,7 +26,7 @@ $ npm install random-points-generator
 | `Options` | Description                  |
 | ----------| ---------------------------- |
 | `bbox`    | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (souhtwest lng, lat northeast lng,lat) |
-| `input`   | path to geojson input file |
+| `features`| GeoJSON polygons as features or a FeatureCollection |
 
 ### Example
 ```javascript
