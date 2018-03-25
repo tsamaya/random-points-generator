@@ -1,18 +1,31 @@
 # random-points-generator
 
-Generates _n_ random points.
-Filters : points can be generated inside a geojson polygon from an input file or bounding boxes.
+Generates _n_ random points based on @turf/random.
 
-[![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)[![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
+The value added regarding @turf/random is the filter. Indeed, here points can be generated inside a GeoJSON polygon.
+
+ And it comes with :
+ - a command line,
+ - _(soon)_ a browser library available on the CDN unkpg
+
+[![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
+[![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 
 ## Prerequisites
 - node
-- npm
 
 ## Usage
 
 ```sh
-$ npm install random-points-generator
+$ npm i random-points-generator
+```
+
+or
+
+```sh
+yarn add random-points-generator
 ```
 
 ### API
@@ -22,6 +35,8 @@ $ npm install random-points-generator
  | ----------| ---------------------------- | ------- | --------- |
  | `number`  | number of points to generate | Integer | 10        |
  | `options` | random options               | Object  | undefined |
+
+returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
 
 >`options`
 
@@ -67,10 +82,6 @@ Examples:
                                             world_countries.geojson
 ```
 
-## Resources
-
-_resources_ folder contains Large Scale Data from [Natural Earth](http://www.naturalearthdata.com/)
-
 ## Converting to csv
 
 CSV files are not dead. So if needed here is a simple example to generate csv files.
@@ -90,6 +101,7 @@ geojson2csv('points.geojson','points.csv', function(err){
   if(err) throw err
 });
 ```
+
 ## Revision History
 
 | Version  | Date       | Description                        |
@@ -101,6 +113,10 @@ geojson2csv('points.geojson','points.csv', function(err){
 | `v1.1.0` | 25/04/2017 | Split command line and lib         |
 | `v1.0.0` | 03/10/2016 | Creation : a tool command line     |
 
+
+## Resources
+
+_resources_ folder contains Large Scale Data from [Natural Earth](http://www.naturalearthdata.com/)
 
 ## Licensing
 
