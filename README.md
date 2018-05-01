@@ -108,15 +108,18 @@ $ node
 
 ```javascript
 const geojson2csv = require('geojson2csv');
-geojson2csv('points.geojson','points.csv', function(err){
-  if(err) throw err
+
+geojson2csv('points.geojson','points.csv', (err) => {
+  if(err) throw err;
 });
 ```
+:warning: csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
 
 ## Revision History
 
 | Version  | Date       | Description                        |
 | -------- | ---------- | ---------------------------------- |
+| `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message  |
 | `v1.5.0` | 25/03/2018 | add a browser package              |
 | `v1.4.0` | 20/02/2018 | Use single turf modules            |
 | `v1.3.0` | 07/11/2017 | Unkink input polygons              |
