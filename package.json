@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
