@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
@@ -27,7 +27,7 @@
     ]
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --mode production",
     "codecov": "codecov",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
     "prebuild": "npm run test",
