@@ -126,6 +126,7 @@ geojson2csv('points.geojson', 'points.csv', err => {
 
 | Version  | Date       | Description                       |
 | -------- | ---------- | --------------------------------- |
+| `v1.6.1` | 10/12/2018 | Missing Built Files               |
 | `v1.6.0` | 10/12/2018 | Upgrade deps packages             |
 | `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message |
 | `v1.5.0` | 25/03/2018 | add a browser package             |
