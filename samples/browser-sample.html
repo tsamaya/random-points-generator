@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Points Generator Sample</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Random Points Generator Sample</title>
-</head>
-
-<body>
-  <div id="result" class=""><div>
-  <script src="../dist/random-points.min.js"></script>
-  <script>
-    const fc = geotools.random(5);
-    const output = JSON.stringify(fc, null, '  ');
-    console.log(output);
-    const div = document.getElementById('result');
-    div.innerHTML = '<pre>' + output + '</pre>';
-  </script>
-</body>
-
+  <body>
+    <div id="result" class=""></div>
+    <script src="../dist/random-points.min.js"></script>
+    <script>
+      const fc = geotools.random(5);
+      const output = JSON.stringify(fc, null, '  ');
+      console.log(output);
+      const div = document.getElementById('result');
+      div.innerHTML = '<pre>' + output + '</pre>';
+    </script>
+  </body>
 </html>
