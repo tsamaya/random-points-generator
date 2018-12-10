@@ -1,7 +1,5 @@
-/* eslint "import/no-extraneous-dependencies": "off" */
-
 const fs = require('fs');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const RandomGenerator = require('../index');
 
 describe('Generates random points:', () => {

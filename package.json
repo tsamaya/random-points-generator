@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "description": "random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "main": "index.js",
@@ -10,7 +10,16 @@
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
     "*.js": [
       "prettier --write",
       "eslint --fix",
@@ -22,7 +31,6 @@
     "codecov": "codecov",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
     "prebuild": "npm run test",
-    "precommit": "lint-staged",
     "pretest": "eslint .",
     "test": "mocha"
   },
@@ -37,28 +45,28 @@
   "author": "Arnaud Ferrand",
   "license": "MIT",
   "dependencies": {
-    "@turf/bbox": "^5.1.5",
-    "@turf/helpers": "^6.0.1",
+    "@turf/bbox": "^6.0.1",
+    "@turf/helpers": "^6.1.4",
     "@turf/points-within-polygon": "^5.1.5",
-    "@turf/random": "^5.1.5",
+    "@turf/random": "^6.0.2",
     "@turf/unkink-polygon": "^5.1.5",
-    "lodash": "^4.2.1",
-    "yargs": "^6.6.0"
+    "lodash": "^4.17.11",
+    "yargs": "^12.0.5"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "codecov": "^3.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-prettier": "^2.6.0",
-    "husky": "^0.14.3",
+    "chai": "^4.2.0",
+    "codecov": "^3.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.2.0",
     "istanbul": "^0.4.5",
-    "lint-staged": "^7.0.0",
-    "mocha": "^3.2.0",
-    "prettier": "^1.11.1",
-    "webpack": "^4.2.0",
-    "webpack-cli": "^2.0.13"
+    "lint-staged": "^8.1.0",
+    "mocha": "^5.2.0",
+    "prettier": "^1.15.3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }

@@ -4,9 +4,10 @@ Generates _n_ random points based on @turf/random.
 
 The value added regarding @turf/random is the filter. Indeed, here points can be generated inside a GeoJSON polygon.
 
- And it comes with :
- - a command line tool,
- - a browser library
+And it comes with :
+
+- a command line tool,
+- a browser library
 
 [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
@@ -14,11 +15,13 @@ The value added regarding @turf/random is the filter. Indeed, here points can be
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Prerequisites
+
 - node
 
 ## Usage
 
 ### node
+
 ```sh
 $ npm i random-points-generator
 ```
@@ -40,28 +43,31 @@ yarn add random-points-generator
 ```
 
 ## API
+
 #### function random (number, options)
 
- | Name      | Description                  | Type    | Default   |
- | ----------| ---------------------------- | ------- | --------- |
- | `number`  | number of points to generate | Integer | 10        |
- | `options` | random options               | Object  | undefined |
+| Name      | Description                  | Type    | Default   |
+| --------- | ---------------------------- | ------- | --------- |
+| `number`  | number of points to generate | Integer | 10        |
+| `options` | random options               | Object  | undefined |
 
 returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
 
->`options`
+> `options`
 
-| `Options` | Description                  |
-| ----------| ---------------------------- |
-| `bbox`    | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (souhtwest lng, lat northeast lng,lat) |
-| `features`| GeoJSON polygons as features or a FeatureCollection |
+| `Options`  | Description                                                                                                 |
+| ---------- | ----------------------------------------------------------------------------------------------------------- |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (souhtwest lng, lat northeast lng,lat) |
+| `features` | GeoJSON polygons as features or a FeatureCollection                                                         |
 
 ### Example
+
 ```javascript
 const RandomGenerator = require('random-points-generator');
 const points = RandomGenerator.random(3);
 console.log(JSON.stringify(points));
 ```
+
 will output something like :
 
 ```javascript
@@ -109,23 +115,25 @@ $ node
 ```javascript
 const geojson2csv = require('geojson2csv');
 
-geojson2csv('points.geojson','points.csv', (err) => {
-  if(err) throw err;
+geojson2csv('points.geojson', 'points.csv', err => {
+  if (err) throw err;
 });
 ```
+
 :warning: csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
 
 ## Revision History
 
-| Version  | Date       | Description                        |
-| -------- | ---------- | ---------------------------------- |
-| `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message  |
-| `v1.5.0` | 25/03/2018 | add a browser package              |
-| `v1.4.0` | 20/02/2018 | Use single turf modules            |
-| `v1.3.0` | 07/11/2017 | Unkink input polygons              |
-| `v1.2.0` | 21/05/2017 | Rewrite with es6 notation          |
-| `v1.1.0` | 25/04/2017 | Split command line and lib         |
-| `v1.0.0` | 03/10/2016 | Creation : a tool command line     |
+| Version  | Date       | Description                       |
+| -------- | ---------- | --------------------------------- |
+| `v1.6.0` | 10/12/2018 | Upgrade deps packages             |
+| `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message |
+| `v1.5.0` | 25/03/2018 | add a browser package             |
+| `v1.4.0` | 20/02/2018 | Use single turf modules           |
+| `v1.3.0` | 07/11/2017 | Unkink input polygons             |
+| `v1.2.0` | 21/05/2017 | Rewrite with es6 notation         |
+| `v1.1.0` | 25/04/2017 | Split command line and lib        |
+| `v1.0.0` | 03/10/2016 | Creation : a tool command line    |
 
 ## Resources
 
