@@ -51,7 +51,7 @@
     "@turf/random": "^6.0.2",
     "@turf/unkink-polygon": "^5.1.5",
     "lodash": "^4.17.15",
-    "yargs": "^14.2.0"
+    "yargs": "^15.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
