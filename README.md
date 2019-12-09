@@ -126,7 +126,11 @@ geojson2csv('points.geojson', 'points.csv', err => {
 
 | Version  | Date       | Description                       |
 | -------- | ---------- | --------------------------------- |
-| `v1.6.2` | 09/12/2019 | Upgrade deps packages             |
+| `v1.7.4` | 09/12/2019 | Upgrade deps packages             |
+| `v1.7.3` | 09/12/2019 | Upgrade deps packages             |
+| `v1.7.2` | 16/08/2019 | Upgrade deps packages             |
+| `v1.7.1` | 16/08/2019 | Build removes node 6              |
+| `v1.7.0` | 14/08/2019 | Build / test on node 10           |
 | `v1.6.1` | 10/12/2018 | Missing Built Files               |
 | `v1.6.0` | 10/12/2018 | Upgrade deps packages             |
 | `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message |
