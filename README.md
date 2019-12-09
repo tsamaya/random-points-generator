@@ -12,7 +12,7 @@ And it comes with :
 [![Build Status](https://travis-ci.org/tsamaya/random-points-generator.svg?branch=master)](https://travis-ci.org/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![Greenkeeper badge](https://badges.greenkeeper.io/tsamaya/random-points-generator.svg)](https://greenkeeper.io/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Prerequisites
 
@@ -126,6 +126,7 @@ geojson2csv('points.geojson', 'points.csv', err => {
 
 | Version  | Date       | Description                       |
 | -------- | ---------- | --------------------------------- |
+| `v1.6.2` | 09/12/2019 | Upgrade deps packages             |
 | `v1.6.1` | 10/12/2018 | Missing Built Files               |
 | `v1.6.0` | 10/12/2018 | Upgrade deps packages             |
 | `v1.5.2` | 01/05/2018 | fixes unnecessary verbose message |
