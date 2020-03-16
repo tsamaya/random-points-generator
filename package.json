@@ -17,13 +17,11 @@
   },
   "lint-staged": {
     "*.{json,css,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.js": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "scripts": {
@@ -31,6 +29,7 @@
     "codecov": "codecov",
     "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
     "prebuild": "npm run test",
+    "prepublish": "npm run build",
     "pretest": "eslint .",
     "test": "mocha"
   },
