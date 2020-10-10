@@ -57,7 +57,7 @@ returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
 
 | `Options`  | Description                                                                                                 |
 | ---------- | ----------------------------------------------------------------------------------------------------------- |
-| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (souhtwest lng, lat northeast lng,lat) |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat) |
 | `features` | GeoJSON polygons as features or a FeatureCollection                                                         |
 
 ### Example
@@ -93,8 +93,8 @@ Examples:
   bin/random-points-generator               Generates 10 random coordinates,
                                             output to console in GeoJSON format
   bin/random-points-generator -n 1000       Generates 1000 random coordinates
-  --xmin=-2 --xmax=4 --ymin=-45 --ymax=50   with thsese bounding box
-  bin/random-points-generator -i            Generates 10 random coordiantes
+  --xmin=-2 --xmax=4 --ymin=-45 --ymax=50   with these bounding box
+  bin/random-points-generator -i            Generates 10 random coordinates
   world_countries.geojson                   within polygons from file
                                             world_countries.geojson
 ```
