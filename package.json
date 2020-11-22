@@ -33,7 +33,7 @@
     "prebuild": "npm run test",
     "prepublish": "npm run build",
     "pretest": "eslint .",
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "bugs": "https://github.com/tsamaya/random-points-generator/issues",
   "keywords": [
