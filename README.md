@@ -13,6 +13,7 @@ And it comes with :
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![security status](https://www.meterian.io/badge/gh/tsamaya/random-points-generator/security?branch=master)](https://www.meterian.io/report/gh/tsamaya/random-points-generator)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator?ref=badge_shield)
 
 ## Prerequisites
@@ -116,7 +117,7 @@ $ node
 ```javascript
 const geojson2csv = require('geojson2csv');
 
-geojson2csv('points.geojson', 'points.csv', err => {
+geojson2csv('points.geojson', 'points.csv', (err) => {
   if (err) throw err;
 });
 ```
@@ -127,6 +128,7 @@ geojson2csv('points.geojson', 'points.csv', err => {
 
 | Version  | Date       | Description                       |
 | -------- | ---------- | --------------------------------- |
+| `v1.7.5` | 22/11/2020 | Upgrade deps packages             |
 | `v1.7.4` | 09/12/2019 | Upgrade deps packages             |
 | `v1.7.3` | 09/12/2019 | Upgrade deps packages             |
 | `v1.7.2` | 16/08/2019 | Upgrade deps packages             |
@@ -151,6 +153,5 @@ _resources_ folder contains Large Scale Data from [Natural Earth](http://www.nat
 Licensed under the MIT License
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
-
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator?ref=badge_large)
