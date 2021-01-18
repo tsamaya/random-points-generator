@@ -48,7 +48,7 @@
   "dependencies": {
     "@turf/bbox": "^6.0.1",
     "@turf/helpers": "^6.1.4",
-    "@turf/points-within-polygon": "^5.1.5",
+    "@turf/points-within-polygon": "^6.2.0",
     "@turf/random": "^6.0.2",
     "@turf/unkink-polygon": "^5.1.5",
     "lodash": "^4.17.15",
