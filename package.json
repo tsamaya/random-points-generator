@@ -50,7 +50,7 @@
     "@turf/helpers": "^6.1.4",
     "@turf/points-within-polygon": "^5.1.5",
     "@turf/random": "^6.0.2",
-    "@turf/unkink-polygon": "^5.1.5",
+    "@turf/unkink-polygon": "^6.3.0",
     "lodash": "^4.17.15",
     "yargs": "^16.1.1"
   },
