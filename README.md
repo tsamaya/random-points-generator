@@ -128,6 +128,7 @@ geojson2csv('points.geojson', 'points.csv', (err) => {
 
 | Version  | Date       | Description                       |
 | -------- | ---------- | --------------------------------- |
+| `v1.7.6` | 31/03/2021 | Upgrade deps packages             |
 | `v1.7.5` | 22/11/2020 | Upgrade deps packages             |
 | `v1.7.4` | 09/12/2019 | Upgrade deps packages             |
 | `v1.7.3` | 09/12/2019 | Upgrade deps packages             |
