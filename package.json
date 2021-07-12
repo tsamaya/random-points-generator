@@ -33,7 +33,8 @@
     "prebuild": "npm run test",
     "prepublish": "npm run build",
     "pretest": "eslint .",
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "prepare": "husky install"
   },
   "bugs": "https://github.com/tsamaya/random-points-generator/issues",
   "keywords": [
@@ -62,7 +63,7 @@
     "eslint-config-prettier": "^8.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^7.0.1",
+    "husky": "^7.0.0",
     "istanbul": "^0.4.5",
     "lint-staged": "^11.0.0",
     "mocha": "^9.0.0",
