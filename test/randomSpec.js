@@ -37,7 +37,7 @@ describe('Generates random points:', () => {
     expect(points.features[0].geometry.coordinates[1]).to.be.at.least(11);
     expect(points.features[0].geometry.coordinates[1]).to.be.at.below(48);
   });
-  it('It generates 1 random point within input GeoJSON file', () => {
+  it('It generates 1 random point within input GeoJSON (with unkink)', () => {
     const features = JSON.parse(
       fs.readFileSync('./resources/switzerland.geojson', 'utf8')
     );
@@ -49,5 +49,22 @@ describe('Generates random points:', () => {
     expect(points.features[0].geometry.coordinates[0]).to.be.at.below(11);
     expect(points.features[0].geometry.coordinates[1]).to.be.at.least(11);
     expect(points.features[0].geometry.coordinates[1]).to.be.at.below(48);
+  });
+  it('It generates 2 random points within input GeoJSON, without unkink', () => {
+    const features = JSON.parse(
+      fs.readFileSync('./resources/switzerland.geojson', 'utf8')
+    );
+    const points = RandomGenerator.random(2, { features, unkink: false });
+    expect(points).to.be.a('object');
+    expect(points.features).to.be.a('array');
+    expect(points.features.length).to.equal(2);
+    expect(points.features[0].geometry.coordinates[0]).to.be.at.least(6);
+    expect(points.features[0].geometry.coordinates[0]).to.be.at.below(11);
+    expect(points.features[0].geometry.coordinates[1]).to.be.at.least(11);
+    expect(points.features[0].geometry.coordinates[1]).to.be.at.below(48);
+    expect(points.features[1].geometry.coordinates[0]).to.be.at.least(6);
+    expect(points.features[1].geometry.coordinates[0]).to.be.at.below(11);
+    expect(points.features[1].geometry.coordinates[1]).to.be.at.least(11);
+    expect(points.features[1].geometry.coordinates[1]).to.be.at.below(48);
   });
 });
