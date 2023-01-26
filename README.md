@@ -1,5 +1,10 @@
 # random-points-generator
 
+[![Version](https://img.shields.io/npm/v/random-points-generator.svg)](https://www.npmjs.com/package/random-points-generator)
+[![Downloads](https://img.shields.io/npm/dw/random-points-generator)](https://www.npmjs.com/package/random-points-generator)
+[![GitHub license](https://img.shields.io/github/license/tsamaya/random-points-generator)](https://github.com/tsamaya/random-points-generator/blob/master/LICENSE)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
 Generates _n_ random points based on @turf/random.
 
 The value added regarding @turf/random is the filter. Indeed, here points can be generated inside a GeoJSON polygon.
@@ -7,12 +12,12 @@ The value added regarding @turf/random is the filter. Indeed, here points can be
 And it comes with :
 
 - a command line tool,
+- a node library,
 - a browser library
 
 [![CircleCI (all branches)](https://img.shields.io/circleci/project/github/tsamaya/random-points-generator.svg)](https://circleci.com/gh/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![security status](https://www.meterian.io/badge/gh/tsamaya/random-points-generator/security?branch=master)](https://www.meterian.io/report/gh/tsamaya/random-points-generator)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator?ref=badge_shield)
 
