@@ -14,19 +14,14 @@ jobs:
           name: 'Run coverage'
           command: 'npm run coverage'
 
-  # matrix-tests:
-  #   jobs:
-  #     - node/test:
-  #         matrix:
-  #           parameters:
-  #             version:
-  #               - 19.5.0
-  #               - 18.12.0
-  #               - 16.13.0
-  #               - 14.21.2
-
 workflows:
   build-workflow:
     jobs:
-      - build
-      # - matrix-tests
+      - build:
+          matrix:
+            parameters:
+              version:
+                - 19.5.0
+                - 18.12.0
+                - 16.13.0
+                - 14.21.2
