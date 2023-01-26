@@ -1,0 +1,20 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.1.0
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:16.19.0
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: 'Run coverage'
+          command: 'npm run coverage'
+
+workflows:
+  build-workflow:
+    jobs:
+      - build
