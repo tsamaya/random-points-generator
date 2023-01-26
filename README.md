@@ -18,6 +18,7 @@ And it comes with :
 [![CircleCI (all branches)](https://img.shields.io/circleci/project/github/tsamaya/random-points-generator.svg)](https://circleci.com/gh/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 [![security status](https://www.meterian.io/badge/gh/tsamaya/random-points-generator/security?branch=master)](https://www.meterian.io/report/gh/tsamaya/random-points-generator)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator?ref=badge_shield)
 
