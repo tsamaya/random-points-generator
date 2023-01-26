@@ -62,10 +62,11 @@ returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
 
 > `options`
 
-| `Options`  | Description                                                                                                 |
-| ---------- | ----------------------------------------------------------------------------------------------------------- |
-| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat) |
-| `features` | GeoJSON polygons as features or a FeatureCollection                                                         |
+| `Options`  | Description                                                                                                                   |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                   |
+| `features` | GeoJSON polygons as features or a FeatureCollection                                                                           |
+| `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/#unkinkPolygon)) before processing the features |
 
 ### Example
 
@@ -127,7 +128,7 @@ geojson2csv('points.geojson', 'points.csv', (err) => {
 });
 ```
 
-:warning: csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
+:warning: geojson2csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
 
 ## Revision History
 

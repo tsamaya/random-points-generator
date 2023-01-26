@@ -28,12 +28,15 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "codecov": "codecov",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && codecov",
+    "coverage": "istanbul cover mocha --report lcovonly -- -R spec && codecov",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
     "prebuild": "npm run test",
     "prepublish": "npm run build",
-    "pretest": "eslint .",
-    "test": "./node_modules/.bin/mocha"
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "test:watch": "mocha --watch",
+    "test:coverage": "istanbul cover mocha"
   },
   "bugs": "https://github.com/tsamaya/random-points-generator/issues",
   "keywords": [
