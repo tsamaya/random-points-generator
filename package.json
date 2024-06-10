@@ -49,7 +49,7 @@
   "author": "Arnaud Ferrand",
   "license": "MIT",
   "dependencies": {
-    "@turf/bbox": "^6.0.1",
+    "@turf/bbox": "^7.0.0",
     "@turf/helpers": "^6.1.4",
     "@turf/points-within-polygon": "^6.3.0",
     "@turf/random": "^6.0.2",
