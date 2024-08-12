@@ -53,7 +53,7 @@
     "@turf/helpers": "^7.1.0",
     "@turf/points-within-polygon": "^6.3.0",
     "@turf/random": "^6.0.2",
-    "@turf/unkink-polygon": "^6.3.0",
+    "@turf/unkink-polygon": "^7.1.0",
     "lodash": "^4.17.15",
     "yargs": "^17.0.0"
   },
