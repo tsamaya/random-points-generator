@@ -135,6 +135,7 @@ geojson2csv('points.geojson', 'points.csv', (err) => {
 
 | Version  | Date       | Description                             |
 | -------- | ---------- | --------------------------------------- |
+| `v1.9.1` | 03/11/2024 | deps: Esint 9 and pnpm                  |
 | `v1.9.0` | 29/07/2024 | Upgrade deps packages                   |
 | `v1.8.0` | 26/01/2023 | Adds optional unkink polygons parameter |
 | `v1.7.6` | 31/03/2021 | Upgrade deps packages                   |
