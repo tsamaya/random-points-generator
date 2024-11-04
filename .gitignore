@@ -41,3 +41,5 @@ reports
 
 # tmp folder
 tmp
+
+.nyc_output
