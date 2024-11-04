@@ -9,10 +9,30 @@ jobs:
       - image: cimg/node:20.16.0
     steps:
       - checkout
-      - node/install-packages
+
+      - restore_cache:
+          name: Restore pnpm Package Cache
+          keys:
+            - pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
       - run:
-          name: 'Run coverage'
-          command: 'npm run coverage'
+          name: Configure pnpm package manager
+          command: |
+            pnpm config set store-dir .pnpm-store
+
+      - run:
+          name: Install Dependencies
+          command: |
+            pnpm install
+      - save_cache:
+          name: Save pnpm Package Cache
+          key: pnpm-packages-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - .pnpm-store
+
+      - run:
+          name: Run coverage
+          command: |
+            pnpm coverage
 
 workflows:
   build-workflow:

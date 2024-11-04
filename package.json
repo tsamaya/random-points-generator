@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "coverage": "istanbul cover mocha --report lcovonly -- -R spec && codecov",
+    "coverage": "nyc mocha --report lcovonly -- -R spec && codecov",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "prebuild": "npm run test",
@@ -36,7 +36,7 @@
     "pretest": "npm run lint",
     "test": "mocha",
     "test:watch": "mocha --watch",
-    "test:coverage": "istanbul cover mocha"
+    "test:coverage": "nyc mocha"
   },
   "bugs": "https://github.com/tsamaya/random-points-generator/issues",
   "keywords": [
@@ -58,17 +58,21 @@
     "yargs": "^17.0.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
     "chai": "^4.2.0",
-    "codecov": "^3.6.1",
-    "eslint": "^8.3.0",
+    "codecov": "^3.8.3",
+    "eslint": "^9.14.0",
+    "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-prettier": "^5.0.0",
+    "globals": "^15.11.0",
     "husky": "^9.0.6",
-    "istanbul": "^0.4.5",
     "lint-staged": "^15.0.1",
     "mocha": "^10.0.0",
+    "nyc": "^17.1.0",
     "prettier": "^3.0.0",
     "webpack": "^5.6.0",
     "webpack-cli": "^5.0.0"
