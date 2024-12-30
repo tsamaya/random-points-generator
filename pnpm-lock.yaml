@@ -13,7 +13,7 @@ importers:
         version: 7.2.0
       '@turf/helpers':
         specifier: ^7.1.0
-        version: 7.1.0
+        version: 7.2.0
       '@turf/points-within-polygon':
         specifier: ^6.3.0
         version: 6.5.0
@@ -271,9 +271,6 @@ packages:
 
   '@turf/helpers@6.5.0':
     resolution: {integrity: sha512-VbI1dV5bLFzohYYdgqwikdMVpe7pJ9X3E+dlr425wa2/sMJqYDhTO++ec38/pcPvPE6oD9WEEeU3Xu3gza+VPw==}
-
-  '@turf/helpers@7.1.0':
-    resolution: {integrity: sha512-dTeILEUVeNbaEeoZUOhxH5auv7WWlOShbx7QSd4s0T4Z0/iz90z9yaVCtZOLbU89umKotwKaJQltBNO9CzVgaQ==}
 
   '@turf/helpers@7.2.0':
     resolution: {integrity: sha512-cXo7bKNZoa7aC7ydLmUR02oB3IgDe7MxiPuRz3cCtYQHn+BJ6h1tihmamYDWWUlPHgSNF0i3ATc4WmDECZafKw==}
@@ -2474,11 +2471,6 @@ snapshots:
       '@turf/invariant': 6.5.0
 
   '@turf/helpers@6.5.0': {}
-
-  '@turf/helpers@7.1.0':
-    dependencies:
-      '@types/geojson': 7946.0.14
-      tslib: 2.8.1
 
   '@turf/helpers@7.2.0':
     dependencies:
