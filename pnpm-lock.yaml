@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@turf/bbox':
         specifier: ^7.1.0
-        version: 7.1.0
+        version: 7.2.0
       '@turf/helpers':
         specifier: ^7.1.0
         version: 7.1.0
@@ -263,8 +263,8 @@ packages:
   '@turf/area@6.5.0':
     resolution: {integrity: sha512-xCZdiuojokLbQ+29qR6qoMD89hv+JAgWjLrwSEWL+3JV8IXKeNFl6XkEJz9HGkVpnXvQKJoRz4/liT+8ZZ5Jyg==}
 
-  '@turf/bbox@7.1.0':
-    resolution: {integrity: sha512-PdWPz9tW86PD78vSZj2fiRaB8JhUHy6piSa/QXb83lucxPK+HTAdzlDQMTKj5okRCU8Ox/25IR2ep9T8NdopRA==}
+  '@turf/bbox@7.2.0':
+    resolution: {integrity: sha512-wzHEjCXlYZiDludDbXkpBSmv8Zu6tPGLmJ1sXQ6qDwpLE1Ew3mcWqt8AaxfTP5QwDNQa3sf2vvgTEzNbPQkCiA==}
 
   '@turf/boolean-point-in-polygon@6.5.0':
     resolution: {integrity: sha512-DtSuVFB26SI+hj0SjrvXowGTUCHlgevPAIsukssW6BG5MlNSBQAo70wpICBNJL6RjukXg8d2eXaAWuD/CqL00A==}
@@ -284,8 +284,8 @@ packages:
   '@turf/meta@6.5.0':
     resolution: {integrity: sha512-RrArvtsV0vdsCBegoBtOalgdSOfkBrTJ07VkpiCnq/491W67hnMWmDu7e6Ztw0C3WldRYTXkg3SumfdzZxLBHA==}
 
-  '@turf/meta@7.1.0':
-    resolution: {integrity: sha512-ZgGpWWiKz797Fe8lfRj7HKCkGR+nSJ/5aKXMyofCvLSc2PuYJs/qyyifDPWjASQQCzseJ7AlF2Pc/XQ/3XkkuA==}
+  '@turf/meta@7.2.0':
+    resolution: {integrity: sha512-igzTdHsQc8TV1RhPuOLVo74Px/hyPrVgVOTgjWQZzt3J9BVseCdpfY/0cJBdlSRI4S/yTmmHl7gAqjhpYH5Yaw==}
 
   '@turf/points-within-polygon@6.5.0':
     resolution: {integrity: sha512-YyuheKqjliDsBDt3Ho73QVZk1VXX1+zIA2gwWvuz8bR1HXOkcuwk/1J76HuFMOQI3WK78wyAi+xbkx268PkQzQ==}
@@ -2461,10 +2461,10 @@ snapshots:
       '@turf/helpers': 6.5.0
       '@turf/meta': 6.5.0
 
-  '@turf/bbox@7.1.0':
+  '@turf/bbox@7.2.0':
     dependencies:
-      '@turf/helpers': 7.1.0
-      '@turf/meta': 7.1.0
+      '@turf/helpers': 7.2.0
+      '@turf/meta': 7.2.0
       '@types/geojson': 7946.0.14
       tslib: 2.8.1
 
@@ -2493,9 +2493,9 @@ snapshots:
     dependencies:
       '@turf/helpers': 6.5.0
 
-  '@turf/meta@7.1.0':
+  '@turf/meta@7.2.0':
     dependencies:
-      '@turf/helpers': 7.1.0
+      '@turf/helpers': 7.2.0
       '@types/geojson': 7946.0.14
 
   '@turf/points-within-polygon@6.5.0':
