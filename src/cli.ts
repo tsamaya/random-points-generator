@@ -48,11 +48,11 @@ const argv = yargs(process.argv.slice(2))
   )
   .example(
     '$0 -n 1000 --xmin=-2 --xmax=4 --ymin=-45 --ymax=50',
-    'Generates 1000 random coordinates with thsese bounding box'
+    'Generates 1000 random coordinates with these bounding box'
   )
   .example(
     '$0 -i world_countries.geojson',
-    'Generates 10 random coordiantes within polygons from file world_countries.geojson'
+    'Generates 10 random coordinates within polygons from file world_countries.geojson'
   )
   .parseSync() as ArgvOptions;
 
@@ -63,7 +63,7 @@ options.verbose = argv.verbose;
 
 if (options.verbose) {
   console.log(
-    'Runing random-points-generator with',
+    'Running random-points-generator with',
     util.inspect(argv, {
       depth: null,
     })

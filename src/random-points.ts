@@ -61,7 +61,7 @@ const randomPointsFromGeoJSON = (
 };
 
 /**
- * Creates random points and returns it as a FeatureCollecion
+ * Creates random points and returns it as a FeatureCollection
  * @param  {Number} number of points to generate
  * @param  {Object} options for random [bbox|input]
  * @return FeatureCollection generated random points

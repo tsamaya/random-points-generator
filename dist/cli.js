@@ -5,12 +5,12 @@ import { RandomGenerator } from "./index.js";
 const options = {
     number: 10
 };
-const argv = yargs(process.argv.slice(2)).usage('Usage: $0 [options]').help('h').alias('help', 'h').alias('input', 'i').alias('number', 'n').alias('format', 'f').alias('export', 'e').alias('verbose', 'v').default('number', 10).default('verbose', false).example('$0', 'Generates 10 random coordinates, output to console in GeoJSON format').example('$0 -n 1000 --xmin=-2 --xmax=4 --ymin=-45 --ymax=50', 'Generates 1000 random coordinates with thsese bounding box').example('$0 -i world_countries.geojson', 'Generates 10 random coordiantes within polygons from file world_countries.geojson').parseSync();
+const argv = yargs(process.argv.slice(2)).usage('Usage: $0 [options]').help('h').alias('help', 'h').alias('input', 'i').alias('number', 'n').alias('format', 'f').alias('export', 'e').alias('verbose', 'v').default('number', 10).default('verbose', false).example('$0', 'Generates 10 random coordinates, output to console in GeoJSON format').example('$0 -n 1000 --xmin=-2 --xmax=4 --ymin=-45 --ymax=50', 'Generates 1000 random coordinates with these bounding box').example('$0 -i world_countries.geojson', 'Generates 10 random coordinates within polygons from file world_countries.geojson').parseSync();
 options.number = argv.number;
 options.format = argv.format;
 options.export = argv.export;
 options.verbose = argv.verbose;
-if (options.verbose) console.log('Runing random-points-generator with', util.inspect(argv, {
+if (options.verbose) console.log('Running random-points-generator with', util.inspect(argv, {
     depth: null
 }));
 if (void 0 !== argv.xmin && void 0 !== argv.ymin && void 0 !== argv.xmax && void 0 !== argv.ymax) options.bbox = [
