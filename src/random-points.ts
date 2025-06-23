@@ -1,24 +1,31 @@
-const turf = require('./turf');
+import turf from './turf';
 
 const DEFAULT_NUMBER = 10;
 
-const randomPoints = (n, bbox) => {
+const randomPoints = (n: number, bbox?: GeoJSON.BBox) => {
   const count = n || DEFAULT_NUMBER;
   return turf.randomPoint(count, {
     bbox,
   });
 };
 
-const randomPointsFromGeoJSON = (input, { features, unkink }) => {
+const randomPointsFromGeoJSON = (
+  input: number,
+  { features, unkink }: { features: GeoJSON.FeatureCollection; unkink: boolean }
+) => {
   let fc;
   if (unkink) {
+    // @ts-expect-error TODO: fix this
     fc = turf.unkinkPolygon(features);
   } else {
     fc = features;
   }
 
   const ori = input || DEFAULT_NUMBER;
-  const randomFeatures = [];
+  const randomFeatures: GeoJSON.Feature<
+    GeoJSON.Point,
+    GeoJSON.GeoJsonProperties
+  >[] = [];
   const bbox = turf.bbox(fc);
   let n = ori;
   let flag = false;
@@ -29,9 +36,15 @@ const randomPointsFromGeoJSON = (input, { features, unkink }) => {
       bbox,
     });
     joker += 1;
+    // @ts-expect-error TODO: fix this
     const ptsWithin = turf.pointsWithinPolygon(thePoints, fc);
     for (let i = 0; i < ptsWithin.features.length; i += 1) {
-      randomFeatures.push(ptsWithin.features[i]);
+      const feature = ptsWithin.features[i];
+      if (feature !== undefined && feature.geometry.type === 'Point') {
+        randomFeatures.push(
+          feature as GeoJSON.Feature<GeoJSON.Point, GeoJSON.GeoJsonProperties>
+        );
+      }
     }
     if (randomFeatures.length < ori) {
       n = ori - randomFeatures.length;
@@ -53,9 +66,16 @@ const randomPointsFromGeoJSON = (input, { features, unkink }) => {
  * @param  {Object} options for random [bbox|input]
  * @return FeatureCollection generated random points
  */
-module.exports = (number, options) => {
+export function random(
+  n: number,
+  options: {
+    bbox?: GeoJSON.BBox;
+    features?: GeoJSON.FeatureCollection;
+    unkink?: boolean;
+  }
+): GeoJSON.FeatureCollection {
   let points;
-  let params = options;
+  let params = { ...options };
   if (typeof params === 'undefined') {
     params = { unkink: true };
   }
@@ -65,10 +85,18 @@ module.exports = (number, options) => {
 
   // console.debug('params', params);
   if (typeof params.features !== 'undefined') {
-    points = randomPointsFromGeoJSON(number, params);
+    points = randomPointsFromGeoJSON(n, {
+      features: params.features,
+      unkink: params.unkink,
+    });
   } else {
-    points = randomPoints(number, params.bbox);
+    points = randomPoints(n, params.bbox);
   }
 
-  return points;
-};
+  return points as GeoJSON.FeatureCollection<
+    GeoJSON.Geometry,
+    GeoJSON.GeoJsonProperties
+  >;
+}
+
+export default { random };

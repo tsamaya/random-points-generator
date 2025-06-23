@@ -1,16 +1,74 @@
 {
   "name": "random-points-generator",
-  "version": "1.10.0",
-  "description": "random points generator",
+  "version": "2.0.0-beta.1",
+  "description": "Random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
-  "main": "index.js",
-  "bin": {
-    "random-points-generator": "bin/random-points-generator"
-  },
-  "unpkg": "dist/random-points.min.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tsamaya/random-points-generator.git"
+  },
+  "bugs": "https://github.com/tsamaya/random-points-generator/issues",
+  "keywords": [
+    "random",
+    "point",
+    "generator",
+    "csv",
+    "geojson"
+  ],
+  "author": "Arnaud Ferrand",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "random-points-generator": "dist/cli.js"
+  },
+  "unpkg": "dist/random-points.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "clean": "rm -rf dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prebuild": "pnpm run test",
+    "prepublish": "pnpm run build",
+    "pretest": "pnpm run lint"
+  },
+  "dependencies": {
+    "@turf/bbox": "^7.2.0",
+    "@turf/helpers": "^7.2.0",
+    "@turf/points-within-polygon": "^7.2.0",
+    "@turf/random": "^7.2.0",
+    "@turf/unkink-polygon": "^7.2.0",
+    "@types/geojson": "^7946.0.16",
+    "geojson": "^0.5.0",
+    "lodash": "^4.17.15",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
+    "@rsbuild/plugin-umd": "^1.0.4",
+    "@rslib/core": "^0.10.2",
+    "@types/node": "^24.0.3",
+    "@types/yargs": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-vitest": "^0.5.4",
+    "globals": "^16.0.0",
+    "husky": "^9.0.6",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "vitest": "^3.2.4"
   },
   "husky": {
     "hooks": {
@@ -25,56 +83,5 @@
       "prettier --write",
       "eslint --fix"
     ]
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "coverage": "nyc mocha --report lcovonly -- -R spec && codecov",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "prebuild": "npm run test",
-    "prepublish": "npm run build",
-    "pretest": "npm run lint",
-    "test": "mocha",
-    "test:watch": "mocha --watch",
-    "test:coverage": "nyc mocha"
-  },
-  "bugs": "https://github.com/tsamaya/random-points-generator/issues",
-  "keywords": [
-    "random",
-    "point",
-    "generator",
-    "csv",
-    "geojson"
-  ],
-  "author": "Arnaud Ferrand",
-  "license": "MIT",
-  "dependencies": {
-    "@turf/bbox": "^7.1.0",
-    "@turf/helpers": "^7.1.0",
-    "@turf/points-within-polygon": "^6.3.0",
-    "@turf/random": "^7.1.0",
-    "@turf/unkink-polygon": "^6.3.0",
-    "lodash": "^4.17.15",
-    "yargs": "^18.0.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
-    "chai": "^4.2.0",
-    "codecov": "^3.8.3",
-    "eslint": "^9.14.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "globals": "^16.0.0",
-    "husky": "^9.0.6",
-    "lint-staged": "^16.0.0",
-    "mocha": "^11.0.1",
-    "nyc": "^17.1.0",
-    "prettier": "^3.0.0",
-    "webpack": "^5.6.0",
-    "webpack-cli": "^6.0.1"
   }
 }

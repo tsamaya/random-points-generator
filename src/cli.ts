@@ -1,20 +1,44 @@
 /* eslint no-console: "off" */
 
-const fs = require('fs');
-const util = require('util');
-const yargs = require('yargs');
+import fs from 'fs';
+import util from 'util';
+import yargs from 'yargs';
 
-const RandomGenerator = require('../index');
-// const RandomGenerator = require('./random-points');
+import { RandomGenerator } from './index';
 
-const options = {};
+interface ArgvOptions {
+  number: number;
+  format?: 'geojson' | 'csv';
+  export?: 'console' | 'file';
+  verbose?: boolean;
+  xmin?: number;
+  ymin?: number;
+  xmax?: number;
+  ymax?: number;
+  i?: string;
+  [key: string]: unknown;
+}
 
-const { argv } = yargs(process.argv.slice(2))
+export type Options = {
+  number: number;
+  verbose?: boolean;
+  bbox?: [number, number, number, number];
+  features?: GeoJSON.FeatureCollection;
+  format?: 'geojson' | 'csv';
+  export?: 'console' | 'file';
+};
+const options: Options = {
+  number: 10,
+};
+
+const argv = yargs(process.argv.slice(2))
   .usage('Usage: $0 [options]')
   .help('h')
   .alias('help', 'h')
   .alias('input', 'i')
   .alias('number', 'n')
+  .alias('format', 'f')
+  .alias('export', 'e')
   .alias('verbose', 'v')
   .default('number', 10)
   .default('verbose', false)
@@ -29,12 +53,13 @@ const { argv } = yargs(process.argv.slice(2))
   .example(
     '$0 -i world_countries.geojson',
     'Generates 10 random coordiantes within polygons from file world_countries.geojson'
-  );
+  )
+  .parseSync() as ArgvOptions;
 
-options.number = argv.n;
-options.format = argv.f;
-options.export = argv.e;
-options.verbose = argv.v;
+options.number = argv.number;
+options.format = argv.format;
+options.export = argv.export;
+options.verbose = argv.verbose;
 
 if (options.verbose) {
   console.log(
@@ -57,7 +82,9 @@ if (argv.i) {
   if (options.verbose) {
     console.log(`file ${argv.i}`);
   }
-  options.features = JSON.parse(fs.readFileSync(argv.i, 'utf8'));
+  options.features = JSON.parse(
+    fs.readFileSync(argv.i, 'utf8')
+  ) as GeoJSON.FeatureCollection;
 }
 
 const points = RandomGenerator.random(options.number, options);

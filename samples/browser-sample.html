@@ -8,9 +8,9 @@
 
   <body>
     <div id="result" class=""></div>
-    <script src="../dist/random-points.min.js"></script>
+    <script type="module" src="../dist/random-points.js"></script>
     <script>
-      const fc = geotools.random(5);
+      const fc = random_points.random(5);
       const output = JSON.stringify(fc, null, '  ');
       console.log(output);
       const div = document.getElementById('result');
