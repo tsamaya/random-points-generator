@@ -29,10 +29,10 @@ jobs:
           paths:
             - .pnpm-store
 
-      # - run:
-      #     name: Run linter
-      #     command: |
-      #       pnpm lint
+      - run:
+          name: Run linter
+          command: |
+            pnpm lint
 
       - run:
           name: Run test coverage
