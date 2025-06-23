@@ -22,13 +22,15 @@
   "bin": {
     "random-points-generator": "dist/cli.js"
   },
-  "unpkg": "dist/random-points.min.js",
+  "unpkg": "dist/random-points.umd.js",
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "rslib build",
+    "build:umd": "rslib build --config rslib.umd.config.ts",
     "clean": "rm -rf dist",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "vitest run",

@@ -1,8 +1,8 @@
 import unkinkPolygon from '@turf/unkink-polygon';
-import {randomPoint} from '@turf/random';
-import {bbox} from '@turf/bbox';
+import { randomPoint } from '@turf/random';
+import { bbox } from '@turf/bbox';
 import pointsWithinPolygon from '@turf/points-within-polygon';
-import {featureCollection} from '@turf/helpers';
+import { featureCollection } from '@turf/helpers';
 
 /**
  * turf wrapper

@@ -40,6 +40,12 @@ or
 yarn add random-points-generator
 ```
 
+or
+
+```sh
+pnpm add random-points-generator
+```
+
 ### browser
 
 ```html
@@ -63,27 +69,30 @@ returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
 
 > `options`
 
-| `Options`  | Description                                                                                                                   |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                   |
-| `features` | GeoJSON polygons as features or a FeatureCollection                                                                           |
+| `Options`  | Description                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                      |
+| `features` | GeoJSON polygons as features or a FeatureCollection                                                                              |
 | `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/api/unkinkPolygon)) before processing the features |
 
 ### Example
 
-__ESM__
+**ESM**
+
 ```javascript
 import RandomGenerator from 'random-points-generator';
 
 console.log(JSON.stringify(RandomGenerator.random(5)));
 ```
+
 will output something like :
 
 ```javascript
 {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[126.41316810428155,-47.548372609587574]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[97.69989737806617,-47.200575920302434]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[24.264802630637277,72.69680002654108]},"properties":{}}]}
 ```
 
-__CJS__
+**CJS**
+
 ```javascript
 const RandomGenerator = require('random-points-generator');
 const points = RandomGenerator.random(3);
@@ -123,26 +132,7 @@ Examples:
 
 ## Converting to csv
 
-CSV files are not dead. So if needed here is a simple example to generate csv files.
-
-```sh
-$ npm install random-points-generator
-$ npm install geojson2csv
-
-$ ./node_modules/.bin/random-points-generator > points.geojson
-
-$ node
-```
-
-```javascript
-const geojson2csv = require('geojson2csv');
-
-geojson2csv('points.geojson', 'points.csv', (err) => {
-  if (err) throw err;
-});
-```
-
-:warning: geojson2csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
+TODO
 
 ## Revision History
 

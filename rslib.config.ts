@@ -22,8 +22,8 @@ export default defineConfig({
     },
   ],
   output: {
-    target: 'web',
-    cleanDistPath: true,
+    target: 'node',
+    cleanDistPath: false,
     sourceMap: true,
   },
 });

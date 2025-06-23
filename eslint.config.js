@@ -39,6 +39,6 @@ export default [
     },
   },
   {
-    ignores: ['dist/**', 'samples/**', 'rslib.config.ts'],
+    ignores: ['dist/**', 'samples/**', 'rslib.config.ts', 'rslib.umd.config.ts'],
   }
 ];

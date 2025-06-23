@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Random Points Generator Sample</title>
+    <script src="../dist/random-points.umd.js"></script>
   </head>
 
   <body>
     <div id="result" class=""></div>
-    <script type="module" src="../dist/random-points.js"></script>
     <script>
-      const fc = random_points.random(5);
+      const fc = geotools.random(5);
       const output = JSON.stringify(fc, null, '  ');
       console.log(output);
       const div = document.getElementById('result');
