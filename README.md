@@ -135,6 +135,7 @@ TODO
 
 | Version         | Date       | Description                             |
 | --------------- | ---------- | --------------------------------------- |
+| `v2.0.0-beta.2` | 30/06/2025 | Improves doc and upgrade deps    |
 | `v2.0.0-beta.1` | 23/06/2025 | Refactor using TypeScript and Vitest    |
 | `v1.10.0`       | 23/06/2025 | Upgrade deps packages                   |
 | `v1.9.1`        | 03/11/2024 | deps: Eslint 9 and pnpm                 |

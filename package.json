@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
   "description": "Random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "repository": {
@@ -53,23 +53,23 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.14.0",
+    "@eslint/js": "^9.30.0",
     "@rsbuild/plugin-umd": "^1.0.4",
-    "@rslib/core": "^0.10.2",
-    "@types/node": "^24.0.3",
+    "@rslib/core": "^0.10.4",
+    "@types/node": "^24.0.7",
     "@types/yargs": "^17.0.33",
-    "@typescript-eslint/eslint-plugin": "^8.34.1",
-    "@typescript-eslint/parser": "^8.34.1",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
     "@vitest/coverage-v8": "^3.2.4",
-    "eslint": "^9.29.0",
+    "eslint": "^9.30.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-vitest": "^0.5.4",
     "globals": "^16.0.0",
     "husky": "^9.0.6",
     "lint-staged": "^16.0.0",
-    "prettier": "^3.0.0",
+    "prettier": "^3.6.2",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.34.1",
+    "typescript-eslint": "^8.35.0",
     "vitest": "^3.2.4"
   },
   "husky": {
@@ -81,7 +81,7 @@
     "*.{json,css,md}": [
       "prettier --write"
     ],
-    "*.js": [
+    "*.{js,cjs,ts}": [
       "prettier --write",
       "eslint --fix"
     ]
