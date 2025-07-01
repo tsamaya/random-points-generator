@@ -33,13 +33,17 @@ var __webpack_require__ = {};
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
+    default: ()=>src,
     RandomGenerator: ()=>external_random_points_cjs_default()
 });
 const external_random_points_cjs_namespaceObject = require("./random-points.cjs");
 var external_random_points_cjs_default = /*#__PURE__*/ __webpack_require__.n(external_random_points_cjs_namespaceObject);
+const src = external_random_points_cjs_namespaceObject.RandomGenerator;
 exports.RandomGenerator = __webpack_exports__.RandomGenerator;
+exports["default"] = __webpack_exports__["default"];
 for(var __webpack_i__ in __webpack_exports__)if (-1 === [
-    "RandomGenerator"
+    "RandomGenerator",
+    "default"
 ].indexOf(__webpack_i__)) exports[__webpack_i__] = __webpack_exports__[__webpack_i__];
 Object.defineProperty(exports, '__esModule', {
     value: true

@@ -9,6 +9,9 @@ export declare function random(n: number, options: {
     features?: GeoJSON.FeatureCollection;
     unkink?: boolean;
 }): GeoJSON.FeatureCollection;
+export declare const RandomGenerator: {
+    random: typeof random;
+};
 declare const _default: {
     random: typeof random;
 };

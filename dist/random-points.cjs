@@ -34,7 +34,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
     default: ()=>random_points,
-    random: ()=>random
+    random: ()=>random,
+    RandomGenerator: ()=>RandomGenerator
 });
 const external_turf_cjs_namespaceObject = require("./turf.cjs");
 var external_turf_cjs_default = /*#__PURE__*/ __webpack_require__.n(external_turf_cjs_namespaceObject);
@@ -85,12 +86,17 @@ function random(n, options) {
     }) : randomPoints(n, params.bbox);
     return points;
 }
+const RandomGenerator = {
+    random
+};
 const random_points = {
     random
 };
+exports.RandomGenerator = __webpack_exports__.RandomGenerator;
 exports["default"] = __webpack_exports__["default"];
 exports.random = __webpack_exports__.random;
 for(var __webpack_i__ in __webpack_exports__)if (-1 === [
+    "RandomGenerator",
     "default",
     "random"
 ].indexOf(__webpack_i__)) exports[__webpack_i__] = __webpack_exports__[__webpack_i__];

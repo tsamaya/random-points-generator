@@ -99,4 +99,8 @@ export function random(
   >;
 }
 
+export const RandomGenerator = {
+  random,
+};
+
 export default { random };

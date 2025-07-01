@@ -46,9 +46,12 @@ function random(n, options) {
     }) : randomPoints(n, params.bbox);
     return points;
 }
+const RandomGenerator = {
+    random
+};
 const random_points = {
     random
 };
-export { random_points as default, random };
+export { RandomGenerator, random_points as default, random };
 
 //# sourceMappingURL=random-points.js.map
