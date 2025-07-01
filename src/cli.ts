@@ -32,7 +32,7 @@ const options: Options = {
 };
 
 const argv = yargs(process.argv.slice(2))
-  .usage('Usage: $0 [options]')
+  .usage(`Usage: random-points-generator [options]`)
   .help('h')
   .alias('help', 'h')
   .alias('input', 'i')
@@ -43,15 +43,15 @@ const argv = yargs(process.argv.slice(2))
   .default('number', 10)
   .default('verbose', false)
   .example(
-    '$0',
+    'random-points-generator',
     'Generates 10 random coordinates, output to console in GeoJSON format'
   )
   .example(
-    '$0 -n 1000 --xmin=-2 --xmax=4 --ymin=-45 --ymax=50',
+    'random-points-generator -n 1000 --xmin=-2 --xmax=4 --ymin=-45 --ymax=50',
     'Generates 1000 random coordinates with these bounding box'
   )
   .example(
-    '$0 -i world_countries.geojson',
+    'random-points-generator -i world_countries.geojson',
     'Generates 10 random coordinates within polygons from file world_countries.geojson'
   )
   .parseSync() as ArgvOptions;
