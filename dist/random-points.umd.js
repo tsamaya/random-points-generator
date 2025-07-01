@@ -268,7 +268,8 @@
             __webpack_require__.r(__webpack_exports__);
             __webpack_require__.d(__webpack_exports__, {
                 default: ()=>random_points,
-                random: ()=>random
+                random: ()=>random,
+                RandomGenerator: ()=>RandomGenerator
             });
             var earthRadius = 63710088e-1;
             function esm_feature(geom, properties, options = {}) {
@@ -1495,6 +1496,9 @@
                 }) : randomPoints(n, params.bbox);
                 return points;
             }
+            const RandomGenerator = {
+                random
+            };
             const random_points = {
                 random
             };
