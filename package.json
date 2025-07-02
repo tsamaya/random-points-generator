@@ -27,7 +27,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rslib build",
+    "build": "pnpm run build:esm && pnpm run build:umd",
+    "build:esm": "rslib build",
     "build:umd": "rslib build --config rslib.umd.config.ts",
     "clean": "rm -rf dist",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
