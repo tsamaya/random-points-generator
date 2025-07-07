@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["webpack://random-points-generator/./src/index.ts"],"sourcesContent":["import { RandomGenerator } from './random-points';\n\nexport { default as RandomGenerator } from './random-points';\n\nexport default RandomGenerator;\n"],"names":["RandomGenerator"],"mappings":";AAIA,YAAeA"}

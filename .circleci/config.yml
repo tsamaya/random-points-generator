@@ -1,12 +1,12 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@5.2.0
+  node: circleci/node@7.1.0
 
 jobs:
   build:
     docker:
-      - image: cimg/node:20.16.0
+      - image: cimg/node:22.16.0
     steps:
       - checkout
 
@@ -30,9 +30,14 @@ jobs:
             - .pnpm-store
 
       - run:
-          name: Run coverage
+          name: Run linter
           command: |
-            pnpm coverage
+            pnpm lint
+
+      - run:
+          name: Run test coverage
+          command: |
+            pnpm test:coverage
 
 workflows:
   build-workflow:

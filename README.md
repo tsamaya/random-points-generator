@@ -18,7 +18,6 @@ And it comes with :
 [![CircleCI (all branches)](https://img.shields.io/circleci/project/github/tsamaya/random-points-generator.svg)](https://circleci.com/gh/tsamaya/random-points-generator)
 [![codecov](https://codecov.io/gh/tsamaya/random-points-generator/branch/master/graph/badge.svg)](https://codecov.io/gh/tsamaya/random-points-generator)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d34f510268c181e7c6f6/maintainability)](https://codeclimate.com/github/tsamaya/random-points-generator/maintainability)
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 [![security status](https://www.meterian.io/badge/gh/tsamaya/random-points-generator/security?branch=master)](https://www.meterian.io/report/gh/tsamaya/random-points-generator)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsamaya%2Frandom-points-generator?ref=badge_shield)
 
@@ -26,9 +25,7 @@ And it comes with :
 
 - node
 
-## Usage
-
-### node
+## Node Usage
 
 ```sh
 $ npm i random-points-generator
@@ -40,7 +37,13 @@ or
 yarn add random-points-generator
 ```
 
-### browser
+or
+
+```sh
+pnpm add random-points-generator
+```
+
+## browser Usage
 
 ```html
 <script src="https://unpkg.com/random-points-generator"></script>
@@ -59,17 +62,33 @@ yarn add random-points-generator
 | `number`  | number of points to generate | Integer | 10        |
 | `options` | random options               | Object  | undefined |
 
-returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3)
+returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) of [Points](https://datatracker.ietf.org/doc/html/rfc7946#section-3.1.2)
 
 > `options`
 
-| `Options`  | Description                                                                                                                   |
-| ---------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                   |
-| `features` | GeoJSON polygons as features or a FeatureCollection                                                                           |
-| `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/#unkinkPolygon)) before processing the features |
+| `Options`  | Description                                                                                                                      |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                      |
+| `features` | GeoJSON polygons as features or a FeatureCollection                                                                              |
+| `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/api/unkinkPolygon)) before processing the features |
 
-### Example
+### Examples
+
+**ESM**
+
+```javascript
+import RandomGenerator from 'random-points-generator';
+
+console.log(JSON.stringify(RandomGenerator.random(5)));
+```
+
+will output something like :
+
+```JSON
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-57.67197760979268,42.78314165298585]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[72.83765393077084,-59.52263527885765]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[54.502068476617396,-60.928402442511306]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-22.331900675385647,39.51543790400138]}},{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-149.45526699981158,-74.96319889821024]}}]}
+```
+
+**CJS**
 
 ```javascript
 const RandomGenerator = require('random-points-generator');
@@ -79,7 +98,7 @@ console.log(JSON.stringify(points));
 
 will output something like :
 
-```javascript
+```JSON
 {"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[126.41316810428155,-47.548372609587574]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[97.69989737806617,-47.200575920302434]},"properties":{}},{"type":"Feature","geometry":{"type":"Point","coordinates":[24.264802630637277,72.69680002654108]},"properties":{}}]}
 ```
 
@@ -110,51 +129,35 @@ Examples:
 
 ## Converting to csv
 
-CSV files are not dead. So if needed here is a simple example to generate csv files.
-
-```sh
-$ npm install random-points-generator
-$ npm install geojson2csv
-
-$ ./node_modules/.bin/random-points-generator > points.geojson
-
-$ node
-```
-
-```javascript
-const geojson2csv = require('geojson2csv');
-
-geojson2csv('points.geojson', 'points.csv', (err) => {
-  if (err) throw err;
-});
-```
-
-:warning: geojson2csv inverts latitude and longitude regarding the column headers [check issue](https://github.com/morganherlocker/geojson2csv/issues/4).
+TODO
 
 ## Revision History
 
-| Version   | Date       | Description                             |
-| --------- | ---------- | --------------------------------------- |
-| `v1.10.0` | 23/06/2025 | Upgrade deps packages                   |
-| `v1.9.1`  | 03/11/2024 | deps: Esint 9 and pnpm                  |
-| `v1.9.0`  | 29/07/2024 | Upgrade deps packages                   |
-| `v1.8.0`  | 26/01/2023 | Adds optional unkink polygons parameter |
-| `v1.7.6`  | 31/03/2021 | Upgrade deps packages                   |
-| `v1.7.5`  | 22/11/2020 | Upgrade deps packages                   |
-| `v1.7.4`  | 09/12/2019 | Upgrade deps packages                   |
-| `v1.7.3`  | 09/12/2019 | Upgrade deps packages                   |
-| `v1.7.2`  | 16/08/2019 | Upgrade deps packages                   |
-| `v1.7.1`  | 16/08/2019 | Build removes node 6                    |
-| `v1.7.0`  | 14/08/2019 | Build / test on node 10                 |
-| `v1.6.1`  | 10/12/2018 | Missing Built Files                     |
-| `v1.6.0`  | 10/12/2018 | Upgrade deps packages                   |
-| `v1.5.2`  | 01/05/2018 | fixes unnecessary verbose message       |
-| `v1.5.0`  | 25/03/2018 | add a browser package                   |
-| `v1.4.0`  | 20/02/2018 | Use single turf modules                 |
-| `v1.3.0`  | 07/11/2017 | Unkink input polygons                   |
-| `v1.2.0`  | 21/05/2017 | Rewrite with es6 notation               |
-| `v1.1.0`  | 25/04/2017 | Split command line and lib              |
-| `v1.0.0`  | 03/10/2016 | Creation : a tool command line          |
+| Version         | Date       | Description                             |
+| --------------- | ---------- | --------------------------------------- |
+| `v2.0.0-beta.3` | 01/07/2025 | Export default                          |
+| `v2.0.0-beta.2` | 30/06/2025 | Improves doc and upgrade deps           |
+| `v2.0.0-beta.1` | 23/06/2025 | Refactor using TypeScript and Vitest    |
+| `v1.10.0`       | 23/06/2025 | Upgrade deps packages                   |
+| `v1.9.1`        | 03/11/2024 | deps: Eslint 9 and pnpm                 |
+| `v1.9.0`        | 29/07/2024 | Upgrade deps packages                   |
+| `v1.8.0`        | 26/01/2023 | Adds optional unkink polygons parameter |
+| `v1.7.6`        | 31/03/2021 | Upgrade deps packages                   |
+| `v1.7.5`        | 22/11/2020 | Upgrade deps packages                   |
+| `v1.7.4`        | 09/12/2019 | Upgrade deps packages                   |
+| `v1.7.3`        | 09/12/2019 | Upgrade deps packages                   |
+| `v1.7.2`        | 16/08/2019 | Upgrade deps packages                   |
+| `v1.7.1`        | 16/08/2019 | Build removes node 6                    |
+| `v1.7.0`        | 14/08/2019 | Build / test on node 10                 |
+| `v1.6.1`        | 10/12/2018 | Missing Built Files                     |
+| `v1.6.0`        | 10/12/2018 | Upgrade deps packages                   |
+| `v1.5.2`        | 01/05/2018 | fixes unnecessary verbose message       |
+| `v1.5.0`        | 25/03/2018 | add a browser package                   |
+| `v1.4.0`        | 20/02/2018 | Use single turf modules                 |
+| `v1.3.0`        | 07/11/2017 | Unkink input polygons                   |
+| `v1.2.0`        | 21/05/2017 | Rewrite with es6 notation               |
+| `v1.1.0`        | 25/04/2017 | Split command line and lib              |
+| `v1.0.0`        | 03/10/2016 | Creation : a tool command line          |
 
 ## Resources
 
