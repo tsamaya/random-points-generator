@@ -135,6 +135,7 @@ TODO
 
 | Version         | Date       | Description                             |
 | --------------- | ---------- | --------------------------------------- |
+| `v2.0.0`        | 07/07/2025 | Release v2                              |
 | `v2.0.0-beta.3` | 01/07/2025 | Export default                          |
 | `v2.0.0-beta.2` | 30/06/2025 | Improves doc and upgrade deps           |
 | `v2.0.0-beta.1` | 23/06/2025 | Refactor using TypeScript and Vitest    |
