@@ -66,11 +66,12 @@ returns a [FeatureCollection](https://tools.ietf.org/html/rfc7946#section-3.3) o
 
 > `options`
 
-| `Options`  | Description                                                                                                                      |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                      |
-| `features` | GeoJSON polygons as features or a FeatureCollection                                                                              |
-| `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/api/unkinkPolygon)) before processing the features |
+| `Options`  | Description                                                                                                                              |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `bbox`     | Array<number> extent in [ minX, minY, maxX, maxY ] order which means (southwest lng, lat northeast lng,lat)                              |
+| `features` | GeoJSON polygons as features or a FeatureCollection                                                                                      |
+| `unkink`   | `true\|false` [Default is true] Unkink Polygon ([see](https://turfjs.org/docs/api/unkinkPolygon)) before processing the features         |
+| `buffer`   | `{radius: number, options?}` [Default is `{}`] Apply a buffer ([see](https://turfjs.org/docs/api/buffer)) before processing the features |
 
 ### Examples
 
@@ -133,32 +134,33 @@ TODO
 
 ## Revision History
 
-| Version         | Date       | Description                             |
-| --------------- | ---------- | --------------------------------------- |
-| `v2.0.0`        | 07/07/2025 | Release v2                              |
-| `v2.0.0-beta.3` | 01/07/2025 | Export default                          |
-| `v2.0.0-beta.2` | 30/06/2025 | Improves doc and upgrade deps           |
-| `v2.0.0-beta.1` | 23/06/2025 | Refactor using TypeScript and Vitest    |
-| `v1.10.0`       | 23/06/2025 | Upgrade deps packages                   |
-| `v1.9.1`        | 03/11/2024 | deps: Eslint 9 and pnpm                 |
-| `v1.9.0`        | 29/07/2024 | Upgrade deps packages                   |
-| `v1.8.0`        | 26/01/2023 | Adds optional unkink polygons parameter |
-| `v1.7.6`        | 31/03/2021 | Upgrade deps packages                   |
-| `v1.7.5`        | 22/11/2020 | Upgrade deps packages                   |
-| `v1.7.4`        | 09/12/2019 | Upgrade deps packages                   |
-| `v1.7.3`        | 09/12/2019 | Upgrade deps packages                   |
-| `v1.7.2`        | 16/08/2019 | Upgrade deps packages                   |
-| `v1.7.1`        | 16/08/2019 | Build removes node 6                    |
-| `v1.7.0`        | 14/08/2019 | Build / test on node 10                 |
-| `v1.6.1`        | 10/12/2018 | Missing Built Files                     |
-| `v1.6.0`        | 10/12/2018 | Upgrade deps packages                   |
-| `v1.5.2`        | 01/05/2018 | fixes unnecessary verbose message       |
-| `v1.5.0`        | 25/03/2018 | add a browser package                   |
-| `v1.4.0`        | 20/02/2018 | Use single turf modules                 |
-| `v1.3.0`        | 07/11/2017 | Unkink input polygons                   |
-| `v1.2.0`        | 21/05/2017 | Rewrite with es6 notation               |
-| `v1.1.0`        | 25/04/2017 | Split command line and lib              |
-| `v1.0.0`        | 03/10/2016 | Creation : a tool command line          |
+| Version         | Date       | Description                                                |
+| --------------- | ---------- | ---------------------------------------------------------- |
+| `v2.1.0-beta.1` | 05/08/2025 | Take an optional buffer into account with GeoJSON features |
+| `v2.0.0`        | 07/07/2025 | Release v2                                                 |
+| `v2.0.0-beta.3` | 01/07/2025 | Export default                                             |
+| `v2.0.0-beta.2` | 30/06/2025 | Improves doc and upgrade deps                              |
+| `v2.0.0-beta.1` | 23/06/2025 | Refactor using TypeScript and Vitest                       |
+| `v1.10.0`       | 23/06/2025 | Upgrade deps packages                                      |
+| `v1.9.1`        | 03/11/2024 | deps: Eslint 9 and pnpm                                    |
+| `v1.9.0`        | 29/07/2024 | Upgrade deps packages                                      |
+| `v1.8.0`        | 26/01/2023 | Adds optional unkink polygons parameter                    |
+| `v1.7.6`        | 31/03/2021 | Upgrade deps packages                                      |
+| `v1.7.5`        | 22/11/2020 | Upgrade deps packages                                      |
+| `v1.7.4`        | 09/12/2019 | Upgrade deps packages                                      |
+| `v1.7.3`        | 09/12/2019 | Upgrade deps packages                                      |
+| `v1.7.2`        | 16/08/2019 | Upgrade deps packages                                      |
+| `v1.7.1`        | 16/08/2019 | Build removes node 6                                       |
+| `v1.7.0`        | 14/08/2019 | Build / test on node 10                                    |
+| `v1.6.1`        | 10/12/2018 | Missing Built Files                                        |
+| `v1.6.0`        | 10/12/2018 | Upgrade deps packages                                      |
+| `v1.5.2`        | 01/05/2018 | fixes unnecessary verbose message                          |
+| `v1.5.0`        | 25/03/2018 | add a browser package                                      |
+| `v1.4.0`        | 20/02/2018 | Use single turf modules                                    |
+| `v1.3.0`        | 07/11/2017 | Unkink input polygons                                      |
+| `v1.2.0`        | 21/05/2017 | Rewrite with es6 notation                                  |
+| `v1.1.0`        | 25/04/2017 | Split command line and lib                                 |
+| `v1.0.0`        | 03/10/2016 | Creation : a tool command line                             |
 
 ## Resources
 

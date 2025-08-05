@@ -33,23 +33,25 @@ var __webpack_require__ = {};
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
-    default: ()=>turf
+    default: ()=>src_turf
 });
 const unkink_polygon_namespaceObject = require("@turf/unkink-polygon");
 var unkink_polygon_default = /*#__PURE__*/ __webpack_require__.n(unkink_polygon_namespaceObject);
 const random_namespaceObject = require("@turf/random");
 const bbox_namespaceObject = require("@turf/bbox");
+const buffer_namespaceObject = require("@turf/buffer");
 const points_within_polygon_namespaceObject = require("@turf/points-within-polygon");
 var points_within_polygon_default = /*#__PURE__*/ __webpack_require__.n(points_within_polygon_namespaceObject);
 const helpers_namespaceObject = require("@turf/helpers");
-const turf_turf = {
+const turf = {
+    buffer: buffer_namespaceObject.buffer,
     randomPoint: random_namespaceObject.randomPoint,
     unkinkPolygon: unkink_polygon_default(),
     bbox: bbox_namespaceObject.bbox,
     pointsWithinPolygon: points_within_polygon_default(),
     featureCollection: helpers_namespaceObject.featureCollection
 };
-const turf = turf_turf;
+const src_turf = turf;
 exports["default"] = __webpack_exports__["default"];
 for(var __webpack_i__ in __webpack_exports__)if (-1 === [
     "default"

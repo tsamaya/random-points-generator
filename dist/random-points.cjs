@@ -33,8 +33,8 @@ var __webpack_require__ = {};
 var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 __webpack_require__.d(__webpack_exports__, {
-    default: ()=>random_points,
     random: ()=>random,
+    default: ()=>random_points,
     RandomGenerator: ()=>RandomGenerator
 });
 const external_turf_cjs_namespaceObject = require("./turf.cjs");
@@ -46,9 +46,14 @@ const randomPoints = (n, bbox)=>{
         bbox
     });
 };
-const randomPointsFromGeoJSON = (input, { features, unkink })=>{
+const randomPointsFromGeoJSON = (input, { features, unkink, buffer })=>{
+    if (void 0 === features || 0 === features.features.length) throw new Error('No features provided to generate random points');
     let fc;
     fc = unkink ? external_turf_cjs_default().unkinkPolygon(features) : features;
+    if (buffer) {
+        fc = external_turf_cjs_default().buffer(fc, buffer.radius, buffer.options);
+        if (!fc) throw new Error('Buffer operation failed, check your buffer parameters');
+    }
     const ori = input || DEFAULT_NUMBER;
     const randomFeatures = [];
     const bbox = external_turf_cjs_default().bbox(fc);
@@ -61,7 +66,7 @@ const randomPointsFromGeoJSON = (input, { features, unkink })=>{
         });
         joker += 1;
         const ptsWithin = external_turf_cjs_default().pointsWithinPolygon(thePoints, fc);
-        for(let i = 0; i < ptsWithin.features.length; i += 1){
+        for(let i = 0; i < ptsWithin.features.length; i++){
             const feature = ptsWithin.features[i];
             if (void 0 !== feature && 'Point' === feature.geometry.type) randomFeatures.push(feature);
         }
@@ -82,7 +87,8 @@ function random(n, options) {
     if (void 0 === params.unkink) params.unkink = true;
     points = void 0 !== params.features ? randomPointsFromGeoJSON(n, {
         features: params.features,
-        unkink: params.unkink
+        unkink: params.unkink,
+        buffer: params.buffer
     }) : randomPoints(n, params.bbox);
     return points;
 }
