@@ -9,16 +9,45 @@ const randomPoints = (n: number, bbox?: GeoJSON.BBox) => {
   });
 };
 
+type BufferOptions = {
+  units?: 'miles' | 'kilometers' | 'degrees' | 'radians';
+  steps?: number;
+};
+
+type BufferType = {
+  radius: number;
+  options?: BufferOptions;
+};
+
 const randomPointsFromGeoJSON = (
   input: number,
-  { features, unkink }: { features: GeoJSON.FeatureCollection; unkink: boolean }
+  {
+    features,
+    unkink,
+    buffer,
+  }: {
+    features: GeoJSON.FeatureCollection;
+    unkink: boolean;
+    buffer?: BufferType;
+  }
 ) => {
+  if (features === undefined || features.features.length === 0) {
+    throw new Error('No features provided to generate random points');
+  }
   let fc;
   if (unkink) {
     // @ts-expect-error TODO: fix this
     fc = turf.unkinkPolygon(features);
   } else {
     fc = features;
+  }
+
+  // apply a buffer if provided
+  if (buffer) {
+    fc = turf.buffer(fc, buffer.radius, buffer.options);
+    if (!fc) {
+      throw new Error('Buffer operation failed, check your buffer parameters');
+    }
   }
 
   const ori = input || DEFAULT_NUMBER;
@@ -38,7 +67,7 @@ const randomPointsFromGeoJSON = (
     joker += 1;
     // @ts-expect-error TODO: fix this
     const ptsWithin = turf.pointsWithinPolygon(thePoints, fc);
-    for (let i = 0; i < ptsWithin.features.length; i += 1) {
+    for (let i = 0; i < ptsWithin.features.length; i++) {
       const feature = ptsWithin.features[i];
       if (feature !== undefined && feature.geometry.type === 'Point') {
         randomFeatures.push(
@@ -61,10 +90,10 @@ const randomPointsFromGeoJSON = (
 };
 
 /**
- * Creates random points and returns it as a FeatureCollection
+ * Creates random points and returns it as a GeoJSON FeatureCollection
  * @param  {Number} number of points to generate
- * @param  {Object} options for random [bbox|input]
- * @return FeatureCollection generated random points
+ * @param  {Object} options for random [bbox|features|unkink|buffer]
+ * @returns {GeoJSON.FeatureCollection} random points
  */
 export function random(
   n: number,
@@ -72,6 +101,7 @@ export function random(
     bbox?: GeoJSON.BBox;
     features?: GeoJSON.FeatureCollection;
     unkink?: boolean;
+    buffer?: BufferType; // turf.buffer options
   }
 ): GeoJSON.FeatureCollection {
   let points;
@@ -88,6 +118,7 @@ export function random(
     points = randomPointsFromGeoJSON(n, {
       features: params.features,
       unkink: params.unkink,
+      buffer: params.buffer,
     });
   } else {
     points = randomPoints(n, params.bbox);

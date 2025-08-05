@@ -35,9 +35,19 @@ jobs:
             pnpm lint
 
       - run:
+          name: Run Check-Types
+          command: |
+            pnpm check-types
+
+      - run:
           name: Run test coverage
           command: |
             pnpm test:coverage
+
+      - run:
+          name: Run Build
+          command: |
+            pnpm build
 
 workflows:
   build-workflow:

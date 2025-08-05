@@ -1,6 +1,6 @@
 {
   "name": "random-points-generator",
-  "version": "2.0.0",
+  "version": "2.1.0-beta.1",
   "description": "Random points generator",
   "homepage": "https://github.com/tsamaya/random-points-generator",
   "repository": {
@@ -31,6 +31,7 @@
     "build:esm": "rslib build",
     "build:umd": "rslib build --config rslib.umd.config.ts",
     "clean": "rm -rf dist",
+    "check-types": "tsc --noEmit",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -43,6 +44,7 @@
   },
   "dependencies": {
     "@turf/bbox": "^7.2.0",
+    "@turf/buffer": "^7.2.0",
     "@turf/helpers": "^7.2.0",
     "@turf/points-within-polygon": "^7.2.0",
     "@turf/random": "^7.2.0",
