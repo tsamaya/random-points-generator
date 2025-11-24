@@ -16,7 +16,7 @@ importers:
         version: 7.2.0
       '@turf/points-within-polygon':
         specifier: ^7.2.0
-        version: 7.2.0
+        version: 7.3.0
       '@turf/random':
         specifier: ^7.2.0
         version: 7.3.0
@@ -678,8 +678,8 @@ packages:
   '@turf/meta@7.3.0':
     resolution: {integrity: sha512-fTLqdQqRm8qA2zHHUbBMY++YT9LDQejLG7OD70XF2dwg9nPiF9mUxO7nrsDp2IY8vNmH9OTAiMtlIjb0ssYccg==}
 
-  '@turf/points-within-polygon@7.2.0':
-    resolution: {integrity: sha512-jRKp8/mWNMzA+hKlQhxci97H5nOio9tp14R2SzpvkOt+cswxl+NqTEi1hDd2XetA7tjU0TSoNjEgVY8FfA0S6w==}
+  '@turf/points-within-polygon@7.3.0':
+    resolution: {integrity: sha512-hctQeP25rCxdWc9Kek+KIWXukicPFwY8kGIbN0//M/PETY8VqW4beWrpf/3uGYwzMP6NRAjczMeb1BkP78ooDA==}
 
   '@turf/random@7.3.0':
     resolution: {integrity: sha512-44qM8wxLy65nYNtP28+TJ5y4SK3kVPvi9Q1u25abqoJcuAf0EJBLXH3o1AHGz+GLv//h1/jbS4tzsB7wKBWM3g==}
@@ -2342,11 +2342,11 @@ snapshots:
       '@turf/helpers': 7.3.0
       '@types/geojson': 7946.0.16
 
-  '@turf/points-within-polygon@7.2.0':
+  '@turf/points-within-polygon@7.3.0':
     dependencies:
-      '@turf/boolean-point-in-polygon': 7.2.0
-      '@turf/helpers': 7.2.0
-      '@turf/meta': 7.2.0
+      '@turf/boolean-point-in-polygon': 7.3.0
+      '@turf/helpers': 7.3.0
+      '@turf/meta': 7.3.0
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
