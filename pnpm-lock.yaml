@@ -19,7 +19,7 @@ importers:
         version: 7.2.0
       '@turf/random':
         specifier: ^7.2.0
-        version: 7.2.0
+        version: 7.3.0
       '@turf/unkink-polygon':
         specifier: ^7.2.0
         version: 7.2.0
@@ -675,8 +675,8 @@ packages:
   '@turf/points-within-polygon@7.2.0':
     resolution: {integrity: sha512-jRKp8/mWNMzA+hKlQhxci97H5nOio9tp14R2SzpvkOt+cswxl+NqTEi1hDd2XetA7tjU0TSoNjEgVY8FfA0S6w==}
 
-  '@turf/random@7.2.0':
-    resolution: {integrity: sha512-fNXs5mOeXsrirliw84S8UCNkpm4RMNbefPNsuCTfZEXhcr1MuHMzq4JWKb4FweMdN1Yx2l/xcytkO0s71cJ50w==}
+  '@turf/random@7.3.0':
+    resolution: {integrity: sha512-44qM8wxLy65nYNtP28+TJ5y4SK3kVPvi9Q1u25abqoJcuAf0EJBLXH3o1AHGz+GLv//h1/jbS4tzsB7wKBWM3g==}
 
   '@turf/unkink-polygon@7.2.0':
     resolution: {integrity: sha512-dFPfzlIgkEr15z6oXVxTSWshWi51HeITGVFtl1GAKGMtiXJx1uMqnfRsvljqEjaQu/4AzG1QAp3b+EkSklQSiQ==}
@@ -2337,9 +2337,9 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/random@7.2.0':
+  '@turf/random@7.3.0':
     dependencies:
-      '@turf/helpers': 7.2.0
+      '@turf/helpers': 7.3.0
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
