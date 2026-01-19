@@ -22,7 +22,7 @@ importers:
         version: 7.3.2
       '@turf/unkink-polygon':
         specifier: ^7.2.0
-        version: 7.3.1
+        version: 7.3.2
       '@types/geojson':
         specifier: ^7946.0.16
         version: 7946.0.16
@@ -654,14 +654,11 @@ packages:
   '@swc/helpers@0.5.18':
     resolution: {integrity: sha512-TXTnIcNJQEKwThMMqBXsZ4VGAza6bvN4pa41Rkqoio6QBKMvo+5lexeTMScGCIxtzgQJzElcvIltani+adC5PQ==}
 
-  '@turf/area@7.3.1':
-    resolution: {integrity: sha512-9nSiwt4zB5QDMcSoTxF28WpK1f741MNKcpUJDiHVRX08CZ4qfGWGV9ZIPQ8TVEn5RE4LyYkFuQ47Z9pdEUZE9Q==}
+  '@turf/area@7.3.2':
+    resolution: {integrity: sha512-d7IuEjAO3TSX5aVeL5WXrtCZCwxUAUOD4+LZ+VjoEe2THmYKdUknCPbH6rdhMBzLyZNuSVRmpRD/QfpCnLqoZg==}
 
   '@turf/bbox@7.3.1':
     resolution: {integrity: sha512-/IyMKoS7P9B0ch5PIlQ6gMfoE8gRr48+cSbzlyexvEjuDuaAV1VURjH1jAthS0ipFG8RrFxFJKnp7TLL1Skong==}
-
-  '@turf/boolean-point-in-polygon@7.3.1':
-    resolution: {integrity: sha512-BUPW63vE43LctwkgannjmEFTX1KFR/18SS7WzFahJWK1ZoP0s1jrfxGX+pi0BH/3Dd9mA71hkGKDDnj1Ndcz0g==}
 
   '@turf/boolean-point-in-polygon@7.3.2':
     resolution: {integrity: sha512-PAfPDQ0TW1+VLgZ7tReTSyZ/X41AW7/nMRQxVpY+h/aG7JomZJ779lojnODT4dWCn3IMTA3xD2dDDfVYBAQMYg==}
@@ -671,9 +668,6 @@ packages:
 
   '@turf/helpers@7.3.2':
     resolution: {integrity: sha512-5HFN42rgWjSobdTMxbuq+ZdXPcqp1IbMgFYULTLCplEQM3dXhsyRFe7DCss4Eiw12iW3q6Z5UeTNVfITsE5lgA==}
-
-  '@turf/invariant@7.3.1':
-    resolution: {integrity: sha512-IdZJfDjIDCLH+Gu2yLFoSM7H23sdetIo5t4ET1/25X8gi3GE2XSqbZwaGjuZgNh02nisBewLqNiJs2bo+hrqZA==}
 
   '@turf/invariant@7.3.2':
     resolution: {integrity: sha512-brGmL1EFhZH/YNXhq6S+8sPWBEnmvEyxMWJO8bUNOFZyWHYiRTwxQHZM+An1blkbQ77PiEzsdNAspZqE1j7YKA==}
@@ -690,8 +684,8 @@ packages:
   '@turf/random@7.3.2':
     resolution: {integrity: sha512-9sx6MD3FcM/5VVuG0cN8E3W8bkR48IR4COpHg/PltC6TRAIG5UpxKgUfg97XQUOSjmK57HxxKx+c0u9/LVwhRw==}
 
-  '@turf/unkink-polygon@7.3.1':
-    resolution: {integrity: sha512-6NVFkCpJUT2P4Yf3z/FI2uGDXqVdEqZqKGl2hYitmH7mNiKhU4bAvvcw7nCSfNG3sUyNhibbtOEopYMRgwimPw==}
+  '@turf/unkink-polygon@7.3.2':
+    resolution: {integrity: sha512-mf2XJnxp9DEXAy50t9/XgitJ/Y+wtaMZJ55gOshKMawXVmDWjJ9IYTHZffqkPLOQFWI1+xFE2wlMBY67TFUL1A==}
 
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
@@ -2277,10 +2271,10 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  '@turf/area@7.3.1':
+  '@turf/area@7.3.2':
     dependencies:
-      '@turf/helpers': 7.3.1
-      '@turf/meta': 7.3.1
+      '@turf/helpers': 7.3.2
+      '@turf/meta': 7.3.2
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
@@ -2289,14 +2283,6 @@ snapshots:
       '@turf/helpers': 7.3.1
       '@turf/meta': 7.3.1
       '@types/geojson': 7946.0.16
-      tslib: 2.8.1
-
-  '@turf/boolean-point-in-polygon@7.3.1':
-    dependencies:
-      '@turf/helpers': 7.3.1
-      '@turf/invariant': 7.3.1
-      '@types/geojson': 7946.0.16
-      point-in-polygon-hao: 1.2.4
       tslib: 2.8.1
 
   '@turf/boolean-point-in-polygon@7.3.2':
@@ -2314,12 +2300,6 @@ snapshots:
 
   '@turf/helpers@7.3.2':
     dependencies:
-      '@types/geojson': 7946.0.16
-      tslib: 2.8.1
-
-  '@turf/invariant@7.3.1':
-    dependencies:
-      '@turf/helpers': 7.3.1
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
@@ -2354,12 +2334,12 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/unkink-polygon@7.3.1':
+  '@turf/unkink-polygon@7.3.2':
     dependencies:
-      '@turf/area': 7.3.1
-      '@turf/boolean-point-in-polygon': 7.3.1
-      '@turf/helpers': 7.3.1
-      '@turf/meta': 7.3.1
+      '@turf/area': 7.3.2
+      '@turf/boolean-point-in-polygon': 7.3.2
+      '@turf/helpers': 7.3.2
+      '@turf/meta': 7.3.2
       '@types/geojson': 7946.0.16
       rbush: 3.0.1
       tslib: 2.8.1
