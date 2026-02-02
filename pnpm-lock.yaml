@@ -19,7 +19,7 @@ importers:
         version: 7.3.2
       '@turf/random':
         specifier: ^7.2.0
-        version: 7.3.2
+        version: 7.3.3
       '@turf/unkink-polygon':
         specifier: ^7.2.0
         version: 7.3.2
@@ -666,6 +666,9 @@ packages:
   '@turf/helpers@7.3.2':
     resolution: {integrity: sha512-5HFN42rgWjSobdTMxbuq+ZdXPcqp1IbMgFYULTLCplEQM3dXhsyRFe7DCss4Eiw12iW3q6Z5UeTNVfITsE5lgA==}
 
+  '@turf/helpers@7.3.3':
+    resolution: {integrity: sha512-9Ias0L1GuZPIzO6sk8jraTEuLJye6n9LYNEdw69ZGOQ6C1IigjxkPW49zmn21aTv1z27vxdVLSS3r+78DB2QnQ==}
+
   '@turf/invariant@7.3.2':
     resolution: {integrity: sha512-brGmL1EFhZH/YNXhq6S+8sPWBEnmvEyxMWJO8bUNOFZyWHYiRTwxQHZM+An1blkbQ77PiEzsdNAspZqE1j7YKA==}
 
@@ -675,8 +678,8 @@ packages:
   '@turf/points-within-polygon@7.3.2':
     resolution: {integrity: sha512-s4F4Hc8YGidnrlkpujHtZMBW+b7vZG3a1dkb5NpBSB+PDD9uM6QFcYpdmVo7HZGBUiXszVdl9VCQOewljZz+sw==}
 
-  '@turf/random@7.3.2':
-    resolution: {integrity: sha512-9sx6MD3FcM/5VVuG0cN8E3W8bkR48IR4COpHg/PltC6TRAIG5UpxKgUfg97XQUOSjmK57HxxKx+c0u9/LVwhRw==}
+  '@turf/random@7.3.3':
+    resolution: {integrity: sha512-11gqu8Fu1mACzcEAPrc9N8QFNeHfSOI21j80Tj4E1fa5qTgbveZ8nIKlIc5Y9XmWfNzSWwjABFejNs8E/OXcag==}
 
   '@turf/unkink-polygon@7.3.2':
     resolution: {integrity: sha512-mf2XJnxp9DEXAy50t9/XgitJ/Y+wtaMZJ55gOshKMawXVmDWjJ9IYTHZffqkPLOQFWI1+xFE2wlMBY67TFUL1A==}
@@ -2233,6 +2236,11 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
+  '@turf/helpers@7.3.3':
+    dependencies:
+      '@types/geojson': 7946.0.16
+      tslib: 2.8.1
+
   '@turf/invariant@7.3.2':
     dependencies:
       '@turf/helpers': 7.3.2
@@ -2253,9 +2261,9 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/random@7.3.2':
+  '@turf/random@7.3.3':
     dependencies:
-      '@turf/helpers': 7.3.2
+      '@turf/helpers': 7.3.3
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
