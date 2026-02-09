@@ -16,7 +16,7 @@ importers:
         version: 7.3.3
       '@turf/points-within-polygon':
         specifier: ^7.2.0
-        version: 7.3.3
+        version: 7.3.4
       '@turf/random':
         specifier: ^7.2.0
         version: 7.3.4
@@ -660,9 +660,6 @@ packages:
   '@turf/bbox@7.3.4':
     resolution: {integrity: sha512-D5ErVWtfQbEPh11yzI69uxqrcJmbPU/9Y59f1uTapgwAwQHQztDWgsYpnL3ns8r1GmPWLP8sGJLVTIk2TZSiYA==}
 
-  '@turf/boolean-point-in-polygon@7.3.3':
-    resolution: {integrity: sha512-hmXV4PofLAVbVZcnKk/yp//0s65huap+L3wKGKzbLWk57fWla/eRmFKx/iQ15xGu05zylHz5cA5AfriVGZHj2g==}
-
   '@turf/boolean-point-in-polygon@7.3.4':
     resolution: {integrity: sha512-v/4hfyY90Vz9cDgs2GwjQf+Lft8o7mNCLJOTz/iv8SHAIgMMX0czEoIaNVOJr7tBqPqwin1CGwsncrkf5C9n8Q==}
 
@@ -672,20 +669,14 @@ packages:
   '@turf/helpers@7.3.4':
     resolution: {integrity: sha512-U/S5qyqgx3WTvg4twaH0WxF3EixoTCfDsmk98g1E3/5e2YKp7JKYZdz0vivsS5/UZLJeZDEElOSFH4pUgp+l7g==}
 
-  '@turf/invariant@7.3.3':
-    resolution: {integrity: sha512-q6UDgWmtIlU+AIxt5Awnh18ZMSuNti6drCXbIBdGdgQaQ1qEiyGZDE3P9RKk6otoLXOBYecOuI0HIwf2IxurhQ==}
-
   '@turf/invariant@7.3.4':
     resolution: {integrity: sha512-88Eo4va4rce9sNZs6XiMJowWkikM3cS2TBhaCKlU+GFHdNf8PFEpiU42VDU8q5tOF6/fu21Rvlke5odgOGW4AQ==}
-
-  '@turf/meta@7.3.3':
-    resolution: {integrity: sha512-Tz1j4h70iFB5SebWWoVv/uL59x4aOngXU+d1xQDXzOCn/O6txnreGVGMcYU362c5F06yqZx38H9UFTQ553lK0w==}
 
   '@turf/meta@7.3.4':
     resolution: {integrity: sha512-tlmw9/Hs1p2n0uoHVm1w3ugw1I6L8jv9YZrcdQa4SH5FX5UY0ATrKeIvfA55FlL//PGuYppJp+eyg/0eb4goqw==}
 
-  '@turf/points-within-polygon@7.3.3':
-    resolution: {integrity: sha512-shi4H7sO+yK+8y7IHyErSCl3QD9QTNIdaXD5uePt91LpheSWGm75Vgi12pOlY+LosM3Yip/Rd6AoRxzkM2NBAA==}
+  '@turf/points-within-polygon@7.3.4':
+    resolution: {integrity: sha512-HfT83Iw99zywDfCp+nJwS+JDzH+GdNug0sut9WDjGEznHKoZyAcOk+hGKL/ja8TeCLx9VsZHOiVCQFm+NTgvgA==}
 
   '@turf/random@7.3.4':
     resolution: {integrity: sha512-CXMS5XDoI5x0zc1aCYbn3t603k8hjaFHNsSOvGBW20z68cwP0UwMQQr0KLqFPqI4J1O7dMX+urn8IHH27RXFYg==}
@@ -2292,14 +2283,6 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/boolean-point-in-polygon@7.3.3':
-    dependencies:
-      '@turf/helpers': 7.3.3
-      '@turf/invariant': 7.3.3
-      '@types/geojson': 7946.0.16
-      point-in-polygon-hao: 1.2.4
-      tslib: 2.8.1
-
   '@turf/boolean-point-in-polygon@7.3.4':
     dependencies:
       '@turf/helpers': 7.3.4
@@ -2318,21 +2301,9 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/invariant@7.3.3':
-    dependencies:
-      '@turf/helpers': 7.3.3
-      '@types/geojson': 7946.0.16
-      tslib: 2.8.1
-
   '@turf/invariant@7.3.4':
     dependencies:
       '@turf/helpers': 7.3.4
-      '@types/geojson': 7946.0.16
-      tslib: 2.8.1
-
-  '@turf/meta@7.3.3':
-    dependencies:
-      '@turf/helpers': 7.3.3
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
@@ -2342,11 +2313,11 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/points-within-polygon@7.3.3':
+  '@turf/points-within-polygon@7.3.4':
     dependencies:
-      '@turf/boolean-point-in-polygon': 7.3.3
-      '@turf/helpers': 7.3.3
-      '@turf/meta': 7.3.3
+      '@turf/boolean-point-in-polygon': 7.3.4
+      '@turf/helpers': 7.3.4
+      '@turf/meta': 7.3.4
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
