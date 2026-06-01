@@ -44,7 +44,7 @@ importers:
         version: 9.39.4
       '@rsbuild/plugin-umd':
         specifier: ^1.0.4
-        version: 1.0.6(@rsbuild/core@2.0.6(core-js@3.47.0))
+        version: 1.0.7(@rsbuild/core@2.0.6(core-js@3.47.0))
       '@rslib/core':
         specifier: ^0.21.0
         version: 0.21.5(core-js@3.47.0)(typescript@5.9.3)
@@ -560,8 +560,8 @@ packages:
       core-js:
         optional: true
 
-  '@rsbuild/plugin-umd@1.0.6':
-    resolution: {integrity: sha512-UqPwgoJThTTlWpvyDeSM94lNADK1XGFtLMmKAxx2t8iSKUHGPc8V+LPCm84WFeLYdEjHo76X4x4HESUE5W/C4Q==}
+  '@rsbuild/plugin-umd@1.0.7':
+    resolution: {integrity: sha512-DWCksusJFyZE8oiw9kSj2r06gCkjdC5YTxFwM0C4mLzxxc6wKUIUqRhkwEroI7Qkkm5n9hcAAaOPzKDTwNtobw==}
     peerDependencies:
       '@rsbuild/core': ^1.0.0 || ^2.0.0-0
     peerDependenciesMeta:
@@ -2129,7 +2129,7 @@ snapshots:
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rsbuild/plugin-umd@1.0.6(@rsbuild/core@2.0.6(core-js@3.47.0))':
+  '@rsbuild/plugin-umd@1.0.7(@rsbuild/core@2.0.6(core-js@3.47.0))':
     optionalDependencies:
       '@rsbuild/core': 2.0.6(core-js@3.47.0)
 
