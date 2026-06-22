@@ -44,10 +44,10 @@ importers:
         version: 9.39.4
       '@rsbuild/plugin-umd':
         specifier: ^1.0.4
-        version: 1.0.7(@rsbuild/core@2.0.14(core-js@3.47.0))
+        version: 1.0.7(@rsbuild/core@2.0.15(core-js@3.47.0))
       '@rslib/core':
-        specifier: ^0.22.0
-        version: 0.22.1(core-js@3.47.0)(typescript@5.9.3)
+        specifier: ^0.23.0
+        version: 0.23.0(core-js@3.47.0)(typescript@5.9.3)
       '@types/node':
         specifier: ^25.0.6
         version: 25.9.3
@@ -550,8 +550,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@2.0.14':
-    resolution: {integrity: sha512-SSPer6vM+v82CV6JXIOzyyT++A1ECgsVvvUuveD5rfGxX/W58vWGnB+zWcYbMfYOjTntD+9ve6QGGh6kBjPx6A==}
+  '@rsbuild/core@2.0.15':
+    resolution: {integrity: sha512-O8vmMhZu1YImO6jOqt/K/vlJSvkq7UtSq5YM1DIlcEd9LW8Gf6/dkQ1B2KPI6F+hSMFBnTTTumdcIowSLCw97g==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -568,8 +568,8 @@ packages:
       '@rsbuild/core':
         optional: true
 
-  '@rslib/core@0.22.1':
-    resolution: {integrity: sha512-RaqTITHFkpMDJG9fmD7Hu6FLE64hwctCo46asHOD2DipzQJWawg6K0pFGimTAyutYEZysIUfYgCwSYkbctDudg==}
+  '@rslib/core@0.23.0':
+    resolution: {integrity: sha512-OEn5iNKYIyoy0JEUOXH2UTPBKlQRy/RjOtODhC4vS/sIw9iE8Nsp/4s0aeOkNtxsenuuxZCZo2foYvilI7VRgg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -1478,8 +1478,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rsbuild-plugin-dts@0.22.1:
-    resolution: {integrity: sha512-6vBfXgwK4j6GkjSRH13tuceBavc6qwSE5IVSoVCZ/wRuM0ZL7dIjdk+yGSWKJt5lNMfc4XwQoTErGIC9zhgztQ==}
+  rsbuild-plugin-dts@0.23.0:
+    resolution: {integrity: sha512-3dyx2+ZeIFRR1E3f28wQrcDW1kMa15thHBe97dJby/rE9GQusGPw+td8sVQnxcxhXwzy7eFkUOzN5XoZ/Nj++A==}
     engines: {node: ^20.19.0 || >=22.12.0}
     peerDependencies:
       '@microsoft/api-extractor': ^7
@@ -2120,7 +2120,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.44.0':
     optional: true
 
-  '@rsbuild/core@2.0.14(core-js@3.47.0)':
+  '@rsbuild/core@2.0.15(core-js@3.47.0)':
     dependencies:
       '@rspack/core': 2.0.8(@swc/helpers@0.5.23)
       '@swc/helpers': 0.5.23
@@ -2129,14 +2129,14 @@ snapshots:
     transitivePeerDependencies:
       - '@module-federation/runtime-tools'
 
-  '@rsbuild/plugin-umd@1.0.7(@rsbuild/core@2.0.14(core-js@3.47.0))':
+  '@rsbuild/plugin-umd@1.0.7(@rsbuild/core@2.0.15(core-js@3.47.0))':
     optionalDependencies:
-      '@rsbuild/core': 2.0.14(core-js@3.47.0)
+      '@rsbuild/core': 2.0.15(core-js@3.47.0)
 
-  '@rslib/core@0.22.1(core-js@3.47.0)(typescript@5.9.3)':
+  '@rslib/core@0.23.0(core-js@3.47.0)(typescript@5.9.3)':
     dependencies:
-      '@rsbuild/core': 2.0.14(core-js@3.47.0)
-      rsbuild-plugin-dts: 0.22.1(@rsbuild/core@2.0.14(core-js@3.47.0))(typescript@5.9.3)
+      '@rsbuild/core': 2.0.15(core-js@3.47.0)
+      rsbuild-plugin-dts: 0.23.0(@rsbuild/core@2.0.15(core-js@3.47.0))(typescript@5.9.3)
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -3131,10 +3131,10 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.44.0
       fsevents: 2.3.3
 
-  rsbuild-plugin-dts@0.22.1(@rsbuild/core@2.0.14(core-js@3.47.0))(typescript@5.9.3):
+  rsbuild-plugin-dts@0.23.0(@rsbuild/core@2.0.15(core-js@3.47.0))(typescript@5.9.3):
     dependencies:
       '@ast-grep/napi': 0.37.0
-      '@rsbuild/core': 2.0.14(core-js@3.47.0)
+      '@rsbuild/core': 2.0.15(core-js@3.47.0)
     optionalDependencies:
       typescript: 5.9.3
 
