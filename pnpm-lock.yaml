@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@turf/bbox':
         specifier: ^7.2.0
-        version: 7.3.5
+        version: 7.4.0
       '@turf/helpers':
         specifier: ^7.2.0
         version: 7.4.0
@@ -682,8 +682,8 @@ packages:
   '@turf/area@7.4.0':
     resolution: {integrity: sha512-B7q5f6QwKIxxbl4/L59lAYA+FF7h2hv6st96PuKue0TGCYGSxAG/lV8LHSPUSOuOrLywN4jytJcKK3vOFBs7Nw==}
 
-  '@turf/bbox@7.3.5':
-    resolution: {integrity: sha512-oG1ya/HtBjAIg4TimbWx+nOYPbY0bCvt82Bq8tm6sBw3qqtbOyRSfDz79Sq90TnH7DXJprJ1qnVGKNtZ6jemfw==}
+  '@turf/bbox@7.4.0':
+    resolution: {integrity: sha512-yOX9lALc2GmjYUIE99+nRj7eZA7eDtx7Ixu/hrgIo+YqHvL1reaPVTC9rQWMHMm0pH0/WHjzk8uOpAHjptrudQ==}
 
   '@turf/boolean-point-in-polygon@7.3.5':
     resolution: {integrity: sha512-ba7+B0wzaS9GtERZOoXUZ6oW8IcIJHNQZf3c+tiD9ESjcsPO1Q/4qIJGTKl92nBLhhracHJxMWBM/U6hAVkaRg==}
@@ -2229,10 +2229,10 @@ snapshots:
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
-  '@turf/bbox@7.3.5':
+  '@turf/bbox@7.4.0':
     dependencies:
-      '@turf/helpers': 7.3.5
-      '@turf/meta': 7.3.5
+      '@turf/helpers': 7.4.0
+      '@turf/meta': 7.4.0
       '@types/geojson': 7946.0.16
       tslib: 2.8.1
 
